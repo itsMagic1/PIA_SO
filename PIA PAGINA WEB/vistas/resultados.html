@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnLinux</title>
+    <link rel="stylesheet" href="../estilos/index.css">
+    <link rel="stylesheet" href="../estilos/examenes.css">
+</head>
+<body>
+    
+    <nav class="nav">
+        <div class="nav__container">
+            <div class="nav__logo">
+                <img src="../imagenes2/logo.webp" alt="LearnLinux Logo">
+            </div>
+
+            <div class="nav__links">
+                <ul class="links">
+                    <li class="links__link"><a href="./index.html">Inicio</a></li>
+                    <li class="links__link"><a href="./examenes.html">Exámenes</a></li>
+                    <li class="links__link"><a href="./resultados.html">Resultados</a></li>
+                </ul>
+
+                <button class="btn-popup">
+                    <img src="../imagenes2/icons8-menú.svg" alt="Menu">
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="popup active">
+        <ul class="links">
+            <li class="links__link"><a class="a-link" href="./index.html">Inicio</a></li>
+            <li class="links__link"><a class="a-link" href="./examenes.html">Exámenes</a></li>
+            <li class="links__link"><a class="a-link" href="./resultados.html">Resultados</a></li>
+            <button class="btn-close btn-hamburguer">
+                <img src="../imagenes2/icons8-eliminar.svg">
+            </button>
+        </ul>
+    </nav>
+
+<!-- Menú de Exámenes -->
+<div class="menu-examenes">
+    <!-- Curso 1: Curso Instalación de Linux -->
+    <div class="curso texto">🖥️ Instalación De Linux</div>
+    <div class="examenes">
+        <p><a href="./examen.html?curso=1&examen=1">Examen 1</a> <span id="examen1-1">--</span></p>
+        <p><a href="./examen.html?curso=1&examen=2">Examen 2</a> <span id="examen1-2">--</span></p>
+        <p><a href="./examen.html?curso=1&examen=3">Examen 3</a> <span id="examen1-3">--</span></p>
+    </div>
+
+    <!-- Curso 2: Primeros Pasos en Linux -->
+    <div class="curso texto">🚀 Primeros Pasos en Linux</div>
+    <div class="examenes">
+        <p><a href="./examen.html?curso=2&examen=1">Examen 1</a> <span id="examen2-1">--</span></p>
+        <p><a href="./examen.html?curso=2&examen=2">Examen 2</a> <span id="examen2-2">--</span></p>
+        <p><a href="./examen.html?curso=2&examen=3">Examen 3</a> <span id="examen2-3">--</span></p>
+    </div>
+
+    <!-- Curso 3: Comandos Esenciales -->
+    <div class="curso texto">🔒 Comandos Esenciales</div>
+    <div class="examenes">
+        <p><a href="./examen.html?curso=3&examen=1">Examen 1</a> <span id="examen3-1">--</span></p>
+        <p><a href="./examen.html?curso=3&examen=2">Examen 2</a> <span id="examen3-2">--</span></p>
+        <p><a href="./examen.html?curso=3&examen=3">Examen 3</a> <span id="examen3-3">--</span></p>
+    </div>
+
+    <!-- Curso 4: Gestión de Paquetes -->
+    <div class="curso texto">📦 Gestión de Paquetes</div>
+    <div class="examenes">
+        <p><a href="./examen.html?curso=4&examen=1">Examen 1</a> <span id="examen4-1">--</span></p>
+        <p><a href="./examen.html?curso=4&examen=2">Examen 2</a> <span id="examen4-2">--</span></p>
+    </div>
+</div>
+
+<script>
+    // Función para obtener la calificación del localStorage
+    function getCalificacion(curso, examen) {
+        // Obtener la calificación guardada en el localStorage para el examen específico
+        const calificacion = localStorage.getItem(`curso${curso}_examen${examen}`);
+        return calificacion ? calificacion : '--'; // Si no existe, retorna '--'
+    }
+
+    // Mostrar las calificaciones de cada examen
+    function mostrarCalificaciones() {
+        for (let curso = 1; curso <= 4; curso++) {
+            for (let examen = 1; examen <= 3; examen++) {
+                const calificacion = getCalificacion(curso, examen);
+                const examenId = `examen${curso}-${examen}`;
+                const elemento = document.getElementById(examenId);
+                if (elemento) {
+                    elemento.textContent = calificacion;
+                }
+            }
+        }
+    }
+
+    // Llamar a la función para mostrar las calificaciones
+    mostrarCalificaciones();
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Buscar todos los spans de calificaciones
+        document.querySelectorAll("span[id^='examen']").forEach(span => {
+            const id = span.id; // ejemplo: "examen1-2"
+            
+            // Extraer curso y examen usando expresiones regulares
+            const partes = id.match(/examen(\d+)-(\d+)/); // partes[1] = curso, partes[2] = examen
+            
+            if (partes) {
+                const curso = partes[1];
+                const examen = partes[2];
+                
+                // Generar la clave con el mismo formato que se usó al guardar en localStorage
+                const clave = `examen${examen}curso${curso}`;
+                const nota = localStorage.getItem(clave);
+    
+                // Mostrar la nota si existe, o "--" si no hay nada
+                span.textContent = nota !== null ? `${nota}%` : "--";
+            }
+        });
+    });
+    </script>
+    
+    <script src="../js/examen.js"></script>
+    <script src="../js/resultados.js"></script>
+    <script src="../js/menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,2067 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnLinux</title>
+    <link rel="stylesheet" href="../estilos/index.css">
+    <link rel="stylesheet" href="../estilos/seccionCursos.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    
+    <nav class="nav">
+        <div class="nav__container">
+            <div class="nav__logo">
+                <img src="../imagenes2/logo.webp" alt="LearnLinux Logo">
+            </div>
+
+            <div class="nav__links">
+                <ul class="links">
+                    <li class="links__link"><a href="./index.html">Inicio</a></li>
+                    <li class="links__link"><a href="./examenes.html">Exámenes</a></li>
+                    <li class="links__link"><a href="./resultados.html">Resultados</a></li>
+                </ul>
+
+                <button class="btn-popup">
+                    <img src="../imagenes2/icons8-menú.svg" alt="Menu">
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="popup active">
+        <ul class="links">
+            <li class="links__link"><a class="a-link" href="./index.html">Inicio</a></li>
+            <li class="links__link"><a class="a-link" href="./examenes.html">Exámenes</a></li>
+            <li class="links__link"><a class="a-link" href="./resultados.html">Resultados</a></li>
+            <button class="btn-close btn-hamburguer">
+                <img src="../imagenes2/icons8-eliminar.svg">
+            </button>
+        </ul>
+    </nav>
+    
+    <div class="cursos">
+        <div data-idCurso="1" data-nombre="curso1" class="curso1 curso">
+
+            <section class="seccionCurso" data-seccion="1" data-idCurso="1">
+                <button data-seccion="1" data-boton="siguiente" class="btn btn-siguiente"><img src="../imagenes2/icons8-siguiente-100.webp" alt="Siguiente"></button>
+                <div class="seccion">
+                    <div class="seccion__textos">
+                        <h2 class="titulo titulo-principal">Instalación de Linux</h2>
+                        <h3 class="subtitulo">¿Por qué instalar Linux?</h3>
+                        <ul class="lista">
+                            <li class="lista__item"><b>Seguridad:</b> Linux es conocido por su enfoque en la seguridad.</li>
+                            <li class="lista__item"><b>Rendimiento:</b> Linux puede ejecutarse eficientemente en hardware más antiguo, lo que lo convierte en una excelente opción para revitalizar PCs viejas.</li>
+                            <li class="lista__item"><b>Libre y Gratuito:</b> La mayoría de las distribuciones de Linux son completamente gratuitas.</li>
+                            <li class="lista__item"><b>Variedad de Distribuciones:</b> Hay muchas distribuciones de Linux disponibles, lo que permite elegir la que mejor se adaptse a tus necesidades.</li>
+                            <li class="lista__item"><b>Desarrollo y Personalización: </b>Linux es el sistema operativo preferido por muchos desarrolladores debido a su flexibilidad y robustez.</li>
+                        </ul>
+                    </div>
+                    <div class="seccion__imagen">
+                        <div class="seccion_imagen--imagen">
+                            <img src="../imagenes2/imagen1.webp">
+                        </div>
+                    </div>
+                </div>
+                <div class="seccion">
+                    <div class="seccion__textos">
+                        <h2 class="titulo">Requisitos de para instalar linux (Parte 1)</h2>
+                        <h3 class="subtitulo">Requisitos de hardware</h3>
+                        <ul>
+                            <li><b>Procesador:</b> <br><i>Mínimo: </i>1 GHz <br><i>Recomendado:</i> 2 GHz o superior especialmente para entornos gráficos complejos</li>
+                            <li><b>Memoria RAM:</b> <br><i>Mínimo: </i> 2 Gb <br><i>Recomendado: </i> 4 Gb o más para un rendimiento fluido, especialmente con entornos gráficos pesados.</li>
+                            <li><b>Espacio en disco:</b> <br><i>Mínimo: </i> 20 Gb de espacio libre en el disco duro.<br><i>Recomendado: </i> 50 Gb o más si se planea instalar muchos programas o guardar archivos grandes.</li>
+                            <li><b>Tarjeta gráfica:</b> <br>Linux es compatible con la mayoría de las tarjetas gráficas, pero asegúrate de instalar los controladores adecuados si utilizas tarjetas de NVIDIA o AMD para un rendimiento óptimo.</li>
+                            <li><b>Unidad USB o DVD:</b> <br> Para la instalación, necesitarás una unidad USB de al menos 4 Gb o un DVD para grabar la imagen ISO de Linux.</li>
+                        </ul>
+                    </div>
+                    <div class="seccion__imagen">
+                        <div class="seccion_imagen--imagen">
+                            <img src="../imagenes2/1.webp">
+                        </div>
+                    </div>
+                </div>
+                <div class="seccion">
+                    <div class="seccion__textos">
+                        <h2 class="titulo">Requisitos de para instalar linux (Parte 2)</h2>
+                        <h3 class="subtitulo">Requisitos de Software</h3>
+                        <p class="texto"><b>Opción 1: Instalación en Máquina Virtual (VM)</b> <br> Para usar Linux dentro de una máquina virtual, necesitarás instalar un software de virtualización y crear una VM donde ejecutarás el sistema operativo.</p>
+                        <b>Software de virtualización</b>
+                        <ul class="lista">
+                            <li class="lista__item"><b>VirtualBox:</b> Gratuito y de código abierto, es una opción popular para crear máquinas virtuales en Linux, Windows y macOS.</li>
+                            <li class="lista__item"><b>VMware Workstation:</b> Una opción premium con características avanzadas y soporte para diversas plataformas.</li>
+                            <li class="lista__item"><b>Hyper-V:</b> Si usas Windows, Hyper-V es una opción nativa para crear máquinas virtuales.</li>
+                        </ul>
+
+                        <b>Software de virtualización</b>
+                        <ul class="lista">
+                            <li class="lista__item"><b>VirtualBox:</b> Gratuito y de código abierto, es una opción popular para crear máquinas virtuales en Linux, Windows y macOS.</li>
+                            <li class="lista__item"><b>VMware Workstation:</b> Una opción premium con características avanzadas y soporte para diversas plataformas.</li>
+                            <li class="lista__item"><b>Hyper-V:</b> Si usas Windows, Hyper-V es una opción nativa para crear máquinas virtuales.</li>
+                        </ul>
+                    </div>
+                    <div class="seccion__imagen">
+                        <div class="seccion_imagen--imagen">
+                            <img src="../imagenes2/5.webp">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="seccion">
+                    <div class="seccion__textos">
+                        <p class="texto"><b>Opción 2: Instalación en Dual Boot</b> <br> Si prefieres instalar Linux junto con otro sistema operativo (como Windows), creando una configuración de dual boot.</p>
+                        <b>Requisito de hardware</b>
+                        <ul class="lista">
+                            <li class="lista__item"><b>Espacio en disco:</b> Se recomienda tener al menos 50 Gb de espacio libre en tu disco duro.</li>
+                        </ul>
+                        <b>Requisito de Software</b>
+                        <ul class="lista">
+                            <li class="lista__item"><b>Imagen ISO de la distro:</b> Al igual que con la VM, necesitarás una imagen ISO de la distribución de Linux que deseas instalar.</li>
+                            <li class="lista__item"><b>Herramienta para crear un medio de instalación:</b> Para crear un medio de instalación, necesitarás una unidad USB de al menos 4 GB. Utiliza Herramients como Rufus o Startup Disk Creator para grabar la imagen ISO en la unidad USB.</li>
+                        </ul>
+                    </div>
+                    <div class="seccion__imagen">
+                        <div class="seccion_imagen--imagen">
+                            <img src="../imagenes2/2.webp">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="seccion">
+                    <div class="seccion__textos">
+                        <h2 class="titulo">Elección de la Distribución de Linux</h2>
+                        <h3 class="subtitulo">¿Qué es una distribución de Linux?</h3>
+                        <p class="texto">Una distribución de Linux es un conjunto del núcleo de Linux junto con aplicaciones, herramientas y un entorno gráfico. Existen muchas distribuciones, cada una con un enfoque diferente: algunas son fáciles de usar, otras están orientadas a usuarios avanzados o servidores.
+                        </p>
+                        <b>Distribuciones populares:</b>
+                        <ul class="lista">
+                            <li>
+                                <b>Ubuntu:</b> 
+                                <br> Basado en Debian, conocido por su facilidad de uso, ideal para principiantes.
+                                <br> Gran comunidad de soporte y documentación.
+                                <br> Viene con aplicaciones esenciales preinstaladas, como el navegador Firefox y la suite de oficina LibreOffice.
+                                <br> Versión de largo soporte (LTS) disponible con actualizaciones de seguridad durante 5 años.
+                            </li>
+                            <li>
+                                <b>Debian:</b> 
+                                <br> Famoso por su estabilidad y fiabilidad.
+                                <br> Más adecuado para servidores y usuarios que prefieren un sistema operativo robusto y estable.
+                                <br>o tiene el software reciente, pero es una opción sólida para aquellos que priorizan la fiabilidad.
+                            </li>
+                            <li>
+                                <b>Fedora:</b> 
+                                <br> Proporciona versiones más recientes de software.
+                                <br>Ideal para usuarios que desean experimentar con las últimas tecnologías de Linux.
+                                <br>Es la distribución patrocinada por Red Hat, adecuada para usuarios que necesitan lo último en software y tecnología.
+                            </li>
+                            <li>
+                                <b>Linux Mint:</b> 
+                                <br> Basado en Ubuntu, es conocido por su simplicidad y facilidad de uso, ideal para usuarios que vienen de Windows.
+                                <br>Viene con varias opciones de entornos gráficos que ofrecen una experiencia similar a Windows.
+                                <br>Incluye una gran cantidad de software preinstalado, lo que facilita el comienzo.
+                            </li>
+                            <li>
+                                <b>CentOS:</b> 
+                                <br>Basada en Red Hat Enterprise Linux (RHEL), es una distribución popular para servidores.
+                                <br>Es gratuita, estable y segura.
+                                <br>Ideal para uso en servidores empresariales.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="seccion__imagen">
+                        <div class="seccion_imagen--imagen">
+                            <img src="../imagenes2/11.webp">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="seccion">
+                    <div class="seccion__textos">
+                        <p class="subtitulo">Problemas con los controladores (drivers) y hardware:</p>
+                        <b>¿Qué pasa?</b>
+                        <p class="texto">Después de instalar Linux, notas que no tienes Wi-Fi, la resolución de pantalla está mal, o no funciona el sonido.</p>
+                        <b>¿Por qué pasa?</b>
+                        <ul class="lista">
+                            <li class="lista__item">
+                                Algunos controladores no son libres y no se incluyen por defecto.
+                            </li>
+                            <li class="lista__item">
+                                El kernel de Linux no puede tener soporte para tu tarjeta Wi-Fi o gráfica si es muy reciente.
+                            </li>
+                            <li class="lista__item">
+                                Algunas distros no instalan todos los drivers automáticamente.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="seccion__imagen">
+                        <div class="seccion_imagen--imagen">
+                            <img src="../imagenes2/3.webp">
+                        </div>
+                    </div>
+                </div>
+            </section> <!-- Curso 1 Seccion 1-->
+                     
+            <section class="seccionCurso" data-seccion="2" data-idCurso="1">
+                <button data-seccion="2" data-boton="anterior" class="btn btn-anterior"><img src="../imagenes2/icons8-go-back-50.webp" alt="Atras"></button>
+                <button data-seccion="2" data-boton="siguiente" class="btn btn-siguiente"><img src="../imagenes2/icons8-siguiente-100.webp" alt="Siguiente"></button>
+
+                <div class="seccion">
+                    <div class="seccion__textos">
+                        <h2 class="titulo titulo-principal">creación de un medio de instalación</h2>
+                        <h3 class="subtitulo">descargar la imagen ISO de linux</h3>
+                        <p class="texto">
+                            La imagen ISO es un archivo que contiene todo el sistema operativo de Linux en un formato que puede ser grabado en un medio como USB o DVD para su instalación.</p>
+                        <p class="texto">
+                            Puedes descargar la ISO desde el sitio oficial de la Distribución que desees, como:
+                        </p>
+                        <ul class="lista">
+                            <li class="lista__item"><a href="https://ubuntu.com/download">Ubuntu</a></li>
+                            <li class="lista__item"><a target="_blank" href="https://www.debian.org/download">Debian</a></li>
+                            <li class="lista__item"><a target="_blank" href="https://getfedora.org/">Fedora</a></li>
+                        </ul>
+                    </div>
+                    <div class="seccion__imagen">
+                        <div class="seccion_imagen--imagen">
+                            <img src="../imagenes2/imagen2.webp">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="seccion">
+                    <div class="seccion__textos">
+                        <h2 class="titulo">Herramientas para crear una USB booteable</h2>
+                        <h3 class="subtitulo">¿Qué es una USB booteable?</h3>
+                        <p class="texto">Una USB booteable (o arrancable) es una USB configurada para que una computadora pueda iniciar (bootear) desde ella en lugar de hacerlo desde el disco duro.</p>
+                        <p class="texto">
+                            Para crear una USB booteable con la imagen ISO de Linux, puedes utilizar herramientas como:</p>
+                        <ul class="lista">
+                            <li class="lista__item"><a target="_blank" href="https://rufus.ie/">Rufus</a>: Muy popular para Windows. Es fácil de usar y rápido.</li>
+                            <li class="lista__item"><a target="_blank" href="https://www.balena.io/etcher/">Balena Etcher</a>: Herramienta multiplataforma (Windows, macOS, Linux).</li>
+                            <li class="lista__item"><a target="_blank" href="https://unetbootin.github.io/">UNetbootin</a>: Permite crear USB booteables para varias distribuciones de Linux.</li>
+                        </ul>
+                    </div>
+                    <div class="seccion__imagen">
+                        <div class="seccion_imagen--imagen">
+                            <img src="../imagenes2/2.webp">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="seccion">
+                    <div class="seccion__textos">
+                        <h3 class="subtitulo">Verificación de la Integridad del archivo ISO</h3>
+                        <p class="texto">Para asegurar que la ISO descargada no esté corrupta o manipulada, debes verificar su suma de comprobación (checksum). Esto se hace comparando el valor hash (SHA256, MD5, etc) de la ISO descargada con el proprocionado en el sitio oficial de la distribución.</p>
+                        <ul class="lista">
+                            <li class="lista__item">En Windows, herramientas como CertUtil o WinMD5Free te permiten verificar el hash del archivo.</li>
+                            <li class="lista__item">En Linux, puedes usar el comando sha256sum nombre_de_archivo.iso para generar el hash y compararlo.</li>
+                        </ul>
+                    </div>
+                    <div class="seccion__imagen">
+                        <div class="seccion_imagen--imagen">
+                            <img src="../imagenes2/6.webp">
+                        </div>
+                    </div>
+                </div>
+            </section> <!-- Curso 1 Seccion 2-->
+
+            <section class="seccionCurso" data-seccion="3" data-idCurso="1">
+                <div class="seccion">
+                    <div class="seccion__textos">
+                        <h2 class="titulo titulo-principal">Primer arranque y configuración inicial</h2>
+                        <h3 class="subtitulo">Primer inicio de sesión:</h3>
+                        <p class="texto">
+                            Después de reiniciar el equipo, aparece la pantalla de inicio de sesión con tu nombre de usuario.
+                        </p>
+                        <ol class="lista">
+                            <li class="lista__item">Introduces la contraseña que creaste durante la instalación.</li>
+                            <li class="lista__item">Algunos escritorios como GNOME, KDE Plasma, Cinnamon, etc, te mostrarán un asistente de bienvenida para ayudarte con pasos iniciales como: 
+                            <ul class="lista">
+                                <li class="lista__item">Elegir la apariencia (tema claro/oscuro).</li>
+                                <li class="lista__item">Conectar a Wi-Fi si no lo hiciste antes. Vincular cuentas en línea como Google, Microsoft, etc.</li>
+                                <li class="lista__item">Vincular cuentas en línea (Google, Microsoft, etc.)</li>
+                            </ul>
+                            </li>
+                            <li class="lista__item">El sistema ya está funcional, y puedes comenzar a usar tus aplicaciones, navegador, terminal, y muchas cosas mas.</li>
+                        </ol>
+                    </div>
+                    <div class="seccion__imagen">
+                        <div class="seccion_imagen--imagen">
+                            <img src="../imagenes2/15.webp">
+                        </div>
+                    </div>
+                </div>
+                <div class="seccion">
+                    <div class="seccion__textos">
+                        <h2 class="titulo">Instalación de actualizaciones</h2>
+                        <p class="texto">
+                            Actualizar es fundamental para la seguridad y estabilidad del sistema.
+                            <br> Puedes hacerlo de 2 formas:
+                        </p>
+
+                       <ol class="lista">
+                        <li class="lista__item">
+                            Puedes hacerlo desde la Interfaz Gráfica:
+                            <ul class="lista">
+                                <li class="lista__item">Busca "Actualizaciones" o "Gestor de Actualizaciones"</li>
+                                <li class="lista__item">Verás una lista de paquetes pendientes de actualizar.</li>
+                                <li class="lista__item">Solo debes hacer click en "Instalar actualizaciones".</li>
+                            </ul>
+                        </li>
+                        <li class="lista__item">
+                            ó desde la Terminal:
+                        </li>
+                        <p class="texto">Ejecuta los siguientes comandos:</p>
+                        <div class="terminal">
+                            <div class="terminal__bar">
+                                <span>bash</span>
+                                <button class="terminal__btn">Copiar Código</button>
+                            </div>
+                            <pre class="terminal__contenido"> <code>
+sudo apt update  <span># Regresca la lista de paquetes</span>
+sudo apt upgrade  <span># Instala las actualizaciones</span>
+sudo apt full-upgrade  <span># (opcional) Resuelve cambios importantes de dependencias</span>
+                            </code></pre>
+                        </div>
+
+                        <p class="texto mt">Para distribuciones basadas en Arch (como manjaro)</p>
+                        <div class="terminal">
+                            <div class="terminal__bar">
+                                <span>bash</span>
+                                <button class="terminal__btn">Copiar Código</button>
+                            </div>
+                            <pre class="terminal__contenido"> <code>
+sudo pacman -Syu
+                            </code></pre>
+                        </div>
+                        <p class="texto mt">En Fedora:</p>
+                        <div class="terminal">
+                            <div class="terminal__bar">
+                                <span>bash</span>
+                                <button class="terminal__btn">Copiar Código</button>
+                            </div>
+                            <pre class="terminal__contenido"> <code>
+sudo dnf update
+                            </code></pre>
+                        </div>
+                       </ol>
+                    </div>
+                    <div class="seccion__imagen">
+                        <div class="seccion_imagen--imagen">
+                            <img src="../imagenes2/20.webp">
+                        </div>
+                    </div>
+                </div>
+                <button data-seccion="3" data-boton="anterior" class="btn btn-anterior"><img src="../imagenes2/icons8-go-back-50.webp" alt="Atras"></button>
+                <button data-seccion="3" data-boton="siguiente" class="btn btn-siguiente"><img src="../imagenes2/icons8-siguiente-100.webp" alt="Siguiente"></button>
+            </section> <!-- Curso 1 Seccion 3-->
+
+            <section class="seccionCurso" data-seccion="4" data-idCurso="1">
+                <div class="seccion">
+                    <div class="seccion__textos">
+                        <h2 class="titulo titulo-principal">Solución de Problemas comunes al instalar linux</h2>
+                        <p class="texto">
+                            Durante la instalación de Linux, pueden surgir errores inesperados. Saber como identificar y resolver estos problemas es parte fundamental del proceso de aprendizaje. Vamos a revisar los problemas más comunes y cómo solucionarlos paso a paso.
+                        </p>
+                        <p class="subtitulo">Problemas con el arranque (boot)</p>
+                        <b>¿Qué pasa?</b>
+                        <p class="texto">Instalas Linux, todo parece ir bien... pero cuando reinicias, el sistema no arranca, o simplemente arranca directo a Windows, o incluso muestra un mensaje de error como "No bootable device".</p>
+
+                        <p class="texto">Posibles causas:</p>
+                        <ul class="lista">
+                            <li class="lista__item">El GRUB (el gestor de arranque de Linux) no se instaló correctamente.</li>
+                            <li class="lista__item">La computadora está en modo UEFI y Linux se instaló en modo Legacy (o viceversa).</li>
+                            <li class="lista__item">El disco donde está Linux no está configurado como principal en el BIOS.</li>
+                        </ul>
+                    </div>
+                    <div class="seccion__imagen">
+                        <div class="seccion_imagen--imagen">
+                            <img src="../imagenes2/10.webp">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="seccion">
+                    <div class="seccion__textos">
+                        <b>Soluciones:</b>
+                        <ol class="lista">
+                            <li class="lista__item">
+                                Verifica la prioridad de arranque:
+                                <ul class="lista">
+                                    <li class="lista__item">Entra al BIOS (normalmente presionando <span class="tecla">F2</span>, <span class="tecla">DEL</span> ó <span class="tecla">ESC</span> al encender el equipo).</li>
+                                    <li class="lista__item">Asegúrate de que el disco donde instalaste LInux esté en primer lugar en la lista de arranque.</li>
+                                </ul>
+                            </li>
+
+                            <li class="lista__item">
+                                Repara GRUB usando un Live USB:
+                                <ul class="lista">
+                                    <li class="lista__item">Inicia desde el USB de Linux (modo prueba o live).</li>
+                                    <li class="lista__item">Abre una terminal y escribe:
+                                    </li>
+                                </ul>
+                                <div class="terminal">
+                                    <div class="terminal__bar">
+                                        <span>bash</span>
+                                        <button class="terminal__btn">Copiar Código</button>
+                                    </div>
+                                    <pre class="terminal__contenido"> <code>
+sudo mount /dev/sdxn /mnt   <span># Reemplaza sdXn por la partición raíz (ej: /dev/sda2)</span>
+sudo grub-install --boot-directory=/mnt/boot /dev/sdX  <span># Reemplaza X por el disco (ej: sda)</span>
+sudo update-grub
+                                    </code></pre>
+                                </div>
+                                <ul class="lista">
+                                    <li class="lista__item">Reinicia el equivo y GRUB debería aparecer con Linux (y Windows si lo tienes en dual boot).</li>
+                                </ul>
+                            </li>
+                            <li class="lista__item">Usa herramientas como <span class="tecla">Boot-Repair</span> si no sabes identificar las particiones.</li>
+                        </ol>
+                    </div>
+                    <div class="seccion__imagen">
+                        <div class="seccion_imagen--imagen">
+                            <img src="../imagenes2/13.webp">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="seccion">
+                    <div class="seccion__textos">
+                        <h3 class="subtitulo">Errores de Particionamiento:</h3>
+                        <p class="texto">
+                            <b>¿Qué pasa?</b> <br>
+                            Durante la instalación, te aparece un error diciendo que no se puede crear la partición, que no se encuentra el espacio libre o que el disco no tiene tabla de particiones válida.
+                        </p>
+                        
+                        <p class="texto">Posibles causas:</p>
+                        <ul class="lista">
+                            <li class="lista__item">El disco tiene una tabla de particiones dañada.</li>
+                            <li class="lista__item">No se crearon las particiones correctamente (por ejemplo, olvidaste asignar / como raíz).</li>
+                            <li class="lista__item">No creaste la partición EFI, necesaria para sistemas en UEFI.</li>
+                            <li class="lista__item">Estás usando el instalador manual sin comprender del todo las particiones.</li>
+                        </ul>
+                    </div>
+                    <div class="seccion__imagen">
+                        <div class="seccion_imagen--imagen">
+                            <img src="../imagenes2/19.webp">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="seccion">
+                    <div class="seccion__textos">
+                        <b>Soluciones:</b>
+                        <ol class="lista">
+                            <li class="lista__item">
+                                Usa GParted antes de instalar: 
+                                <!-- aquiiii -->
+                                <ul class="lista">
+                                    <li class="lista__item">No creaste la partición EFI, necesaria para sistemas en UEFI.</li>
+                                    <li class="lista__item">Puedes borrar, crear y organizar las particiones fácilmente.</li>
+                                    <li class="lista__item">Asegúrate de tener al menos:
+                                        <ul class="lista">
+                                            <li class="lista__item">Una partición <span class="tecla">/</span> (raíz), formateada en ext4.</li>
+                                            <li class="lista__item">Opcional: <span class="tecla">/home</span> para tus archivos</li>
+                                            <li class="lista__item">En EUFI: una partición <span class="tecla">EFI</span> en formato FAT32 con 100 - 500 MB, montada en <span class="tecla">/boot/efi</span>.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="lista__item">
+                                Deja que el instalador haga el particionado automático si no te sientes seguro con el manual.
+                            </li>
+                            <li class="lista__item">
+                                Verifica que haya espacio libre sin asignar si vas a instalar junto a Windows.
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="seccion__imagen">
+                        <div class="seccion_imagen--imagen">
+                            <img src="../imagenes2/18.webp">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="seccion">
+                    <div class="seccion__textos">
+                        <b>Soluciones:</b>
+                        <ol class="lista">
+                            <li class="lista__item">
+                                Usa cable de red (ethernet) para conectarte a internet y bajar los controladores que faltan.
+                            </li>
+                            <li class="lista__item">
+                                En Ubuntu, Linux Mint y derivados:
+                                <ul class="lista">
+                                    <li class="lista__item">Ve a Menú > Controladores adicionales.</li>
+                                    <li class="lista__item">Allí aparecerán drivers recomendados (por ejemplo, para tarjetas NDIDIA o Broadcom).</li>
+                                    <li class="lista__item">Selecciona uno, haz click en "Aplicar cambios" y reinicia.</li>
+                                </ul>
+                            </li>
+                            <li class="lista__item">
+                                Si no tienes internet:
+                                <ul class="lista">
+                                    <li class="lista__item">Puedes descargar los paquetes desde otro equipo y pasarlos en USB.</li>
+                                    <li class="lista__item">Ejemplo: busca el paquete <span class="tecla">bcmwl-kernel-source</span> para Wi-Fi Broadcom.</li>
+                                </ul>
+                            </li>
+                            <li class="lista__item">En distros más técnicas (como Arch Linux), deberás instalar los controladores manualmente usando la terminal.</li>
+                        </ol>
+                    </div>
+                    <div class="seccion__imagen">
+                        <div class="seccion_imagen--imagen">
+                            <img src="../imagenes2/bash.webp">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="seccion">
+                    <div class="seccion__textos">
+                        <h3 class="subtitulo">Recomendación Final</h3>
+                        <p class="texto">Instalar Linux no siempre es perfecto a la primera. Tener problemas no significa que hiciste algo mal, sino que estás aprendiendo cómo funciona tu sistema por dentro. Cada error que superes, cada solución que encuentres, te acerca más a dominar un sistema potente y flexible como lo es Linux.
+                        <br> <span class="tecla">Recuerda:</span> todos los usuarios de Linux han pasado por ahí. Lo importante es no rendirse, buscar, preguntar y seguir explorando.
+                        </p>
+
+                        <h2 class="titulo titulo-principal">¡Felicidades!</h2>
+                        <p class="texto">Si llegaste hasta aquí, ¡Has completado tu primer curso de <span class="tecla">Instalación de Linux!</span> <br> Ya sabes cómo preparar el sistema, hacer una instalación personalizada y solucionar los problemas más comunes.
+                        <br> Ahora formas parte de una comunidad global de personas curiosas, apasionadas y libres. <br> Sigue practicando, rompiendo cosas, arreglándolas y sobre todo: disfrutando el camino. <br> <span class="tecla cursiva">"El conocimiento libre se comparte, se rompe, se repara y se mejora. Bienvenido al mundo Linux".</span></p>
+                    </div>
+                    <div class="seccion__imagen">
+                        <div class="seccion_imagen--imagen">
+                            <img src="../imagenes2/7.webp">
+                        </div>
+                    </div>
+                </div>
+                <button data-seccion="4" data-boton="anterior" class="btn btn-anterior"><img src="../imagenes2/icons8-go-back-50.webp" alt="Atras"></button>
+                <a href="../vistas/index.html" class="btn-final">Finalizar Curso</a>
+            </section> <!-- Curso 1 Seccion 4-->
+        </div> <!-- Curso 1 -->
+        
+        <div data-idCurso="2" data-nombre="curso2" class="curso2 curso">
+            <section class="seccionCurso primerSeccion" data-seccion="1" data-idCurso="2">
+                <div class="seccion">
+                    <div class="seccion__textos">
+                        <h2 class="titulo titulo-principal">Estructura de Archivos en Linux</h2>
+                        <p class="texto">En Línux, <b>todo es un archivo.</b> Sí, literalmente.</p>
+                        <p class="texto intro">Archivos, carpetas, dispositivos, procesos... incluso la memoria y el hardware se representan como archivos. Por eso, la estructura del sistema de archivos es tan importante.</p>
+                        
+                        <br>
+                        <h3 class="subtitulo">La raíz del sistema: <span class="tecla">/</span></h3>
+                        <p class="texto">Todo comienza desde el directorio raíz, llamado simplemente <span class="tecla">/</span>. <br> A partir de ahí, el sistema se organiza como un árbol jerárquico, donde cada carpeta tiene su propio rol.</p>
+                        <p class="texto"><i>Dato curioso: Linux no usa letras de unidades como windows (<span class="tecla">C:\</span>, <span class="tecla">D:\</span>). Todo está unido bajo <span class="tecla">/</span>, incluso otros discos duros o memorias USB que se "montan" en una carpeta específica.</i></p>
+                    </div>
+                    <div class="seccion__imagen">
+                        <div class="seccion_imagen--imagen">
+                            <img src="../imagenes2/6.webp">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="seccion">
+                    <div class="seccion__textos">
+                        <p class="subtitulo">📁<span class="tecla">/</span> (Raíz del sistema)</p>
+                        <ul class="lista">
+                            <li class="lista__item">Punto de partida de todo el sistema de archivos.</li>
+                            <li class="lista__item">No contiene archivos directamente, sino subdirectorios esenciales.</li>
+                        </ul>
+                        <hr>
+                        <p class="subtitulo">🏠<span class="tecla normal">/home</span></p>
+                        <ul class="lista">
+                            <li class="lista__item">Carpeta personal de cada usuario.</li>
+                            <li class="lista__item">Ejemplo: <span class="tecla">/home/maria</span>, <span class="tecla">/home/juan</span>.</li>
+                            <li class="lista__item">Aquí se guardan tus documentos, descargas, configuraciones personales, etc.</li>
+                        </ul>
+                        <hr>
+                        <p class="subtitulo">👑<span class="tecla normal">/root</span></p>
+                        <ul class="lista">
+                            <li class="lista__item">Carpeta del usuario administrador (<span class="tecla">root</span>), no lo confundas con <span class="tecla">/</span>.</li>
+                            <li class="lista__item">Solo accesible para tareas administrativas.</li>
+                        </ul>
+                        <hr>
+                        <p class="subtitulo">⚙️<span class="tecla normal">/etc</span></p>
+                        <ul class="lista">
+                            <li class="lista__item">Contiene archivos de configuración del sistema y programas.</li>
+                            <li class="lista__item">Por ejemplo: configuración de red, servicios, usuarios, etc.</li>
+                        </ul>
+                        <hr>
+                        <p class="subtitulo">🔧<span class="tecla normal">/bin</span></p>
+                        <ul class="lista">
+                            <li class="lista__item">Programas esenciales del sistema (como <span class="tecla">ls</span>, <span class="tecla">cp</span>, <span class="tecla">mv</span>, etc.).</li>
+                            <li class="lista__item">Por ejemplo: configuración de red, servicios, usuarios, etc.</li>
+                        </ul>
+                        <hr>
+                        <p class="subtitulo">🛠️<span class="tecla normal">/sbin</span></p>
+                        <ul class="lista">
+                            <li class="lista__item">Comandos usados para administrar el sistema (como <span class="tecla">shutdown</span>, <span class="tecla">reboot</span>).</li>
+                            <li class="lista__item">Solo los puede usar el administrador.</li>
+                        </ul>
+                        <hr>
+                        <p class="subtitulo">📦<span class="tecla normal">/usr</span></p>
+                        <ul class="lista">
+                            <li class="lista__item">Aquí se instalan la mayoría de los programas y librerías del sistema.</li>
+                            <li class="lista__item">Contiene carpetas como <span class="tecla">/usr/bin</span> (programas), <span class="tecla">/usr/share</span> (documentación), etc.</li>
+                        </ul>
+                        <hr>
+                        <p class="subtitulo">🔄<span class="tecla normal">/var</span></p>
+                        <ul class="lista">
+                            <li class="lista__item">Contiene archivos que cambian constantemente, como logs o colas de impresión.</li>
+                            <li class="lista__item">Ejemplo: <span class="tecla">/var/log/syslog</span> tiene registros del sistema.</li>
+                        </ul>
+                        <hr>
+                        <p class="subtitulo">🗂️<span class="tecla normal">/tmp</span></p>
+                        <ul class="lista">
+                            <li class="lista__item">Espacio para archivos temporales.</li>
+                            <li class="lista__item">Se borra automáticamente al reiniciar el sistema.</li>
+                        </ul>
+                        <hr>
+                        <p class="subtitulo">🔌<span class="tecla normal">/media</span> y <span class="tecla normal">/mnt</span></p>
+                        <ul class="lista">
+                            <li class="lista__item">Donde se montan memorias USB, discos externos y otras particiones.</li>
+                            <li class="lista__item">Por ejemplo: Cuando conectas una USB, aparece en <span class="tecla">/media/usuario/nombreUSB</span>.</li>
+                        </ul>
+                        <hr>
+                        <p class="subtitulo">💽<span class="tecla normal">/dev</span></p>
+                        <ul class="lista">
+                            <li class="lista__item">Representa todos los dispositivos del sistema: discos, terminales, etc.</li>
+                            <li class="lista__item">Ejemplo: <span class="tecla">/dev/sda</span> (tu disco duro principal).</li>
+                        </ul>
+                        <hr>
+                        <p class="subtitulo">🧠<span class="tecla normal">/proc</span> y <span class="tecla normal">/sys</span></p>
+                        <ul class="lista">
+                            <li class="lista__item">Directorios virtuales.</li>
+                            <li class="lista__item">No contienen archivos normales, sino información del ssitema en tiempo real (como procesos activos y hardware detectado).</li>
+                        </ul>
+                    </div>
+                    <div class="seccion__imagen">
+                        <div class="seccion_imagen--imagen">
+                            <img src="../imagenes2/c2 2.webp">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="seccion">
+                    <div class="seccion__textos">
+                        <h3 class="titulo titulo-principal">Consejo</h3>
+                        <p class="texto">Conocer esta estructura es <b class="normal">clave para navegar, entender y administrar tu sistema Linux.</b> Es como aprender los caminos principales antes de manejar por una ciudad.</p>
+                    </div>
+                    <div class="seccion__imagen">
+                        <div class="seccion_imagen--imagen">
+                            <img src="../imagenes2/c2 1.webp">
+                        </div>
+                    </div>
+                </div>
+                <button data-seccion="1" data-boton="siguiente" class="btn btn-siguiente"><img src="../imagenes2/icons8-siguiente-100.webp" alt="Siguiente"></button>
+            </section> <!-- CURSO 2 SECCION 1-->
+
+            <section class="seccionCurso" data-seccion="2" data-idCurso="2">
+                <div class="seccion">
+                    <div class="seccion__textos">
+                        <h2 class="titulo titulo-principal">Personalización del Entorno</h2>
+                        <p class="texto intro">En este módulo aprenderás cómo adaptar el aspecto visual y la experiencia de tu escritorio Linux para que se sienta más cómodo, familiar y funcional. <br> Por el momento no necesitar saber comandos. Todo lo que veremos desde el entorno gráfico, paso a paso.</p>
+                        
+                        <br>
+                        <h3 class="subtitulo">¿Por qué personalizar?</h3>
+                        <p class="texto">Personalizar tu entorno no es solo cuestión de estética. También puede ayudarte a trabajar más cómodo, acceder más rápido a lo que usas y mejorar tu productividad. Además, uno de los grandes atractivos de Linux es que puedes dejar tu sistema totalmente a tu gusto.</p>
+                    </div>
+                    <div class="seccion__imagen">
+                        <div class="seccion_imagen--imagen">
+                            <img src="../imagenes2/18.webp">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="seccion">
+                    <div class="seccion__textos">
+                        <h3 class="subtitulo">🖼️ Cambiar el fondo de pantalla</h3>
+                        <ol class="lista">
+                            <li class="lista__item">Haz click derecho sobre el escritorio.</li>
+                            <li class="lista__item">Selecciona la opción "Cambiar Fondo" o "Cambiar Fondo de Pantalla"</li>
+                            <li class="lista__item">Elige una imagen de la galería o sube la tuya propia.</li>
+                            <li class="lista__item">Puedes definir fondos diferentes para el escritorio y la pantalla de bloqueo.</li>
+                        </ol>
+                        <p class="texto">🔎 <i>Sugerencia:</i> Prueba sitios como <a href="https://wallhaven.cc/">wallhaven.cc</a> o <a href="https://unsplash.com/es">unsplash.com</a> para fondos de calidad.</p>
+                    </div>
+                    <div class="seccion__imagen">
+                        <div class="seccion_imagen--imagen">
+                            <img src="../imagenes2/c2 6.webp">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="seccion">
+                    <div class="seccion__textos">
+                        <h3 class="subtitulo">🎨 Modifica temas, íconos y colores</h3>
+                        <p class="texto">Cada entorno de escritorio (GNOME, KDE Plasma, XFCE, etc.) tiene su forma de personalizar, pero en general puedes hacer lo siguiente:</p>
+                        <ol class="lista">
+                            <li class="lista__item">Ve a Configuración del Sistema.</li>
+                            <li class="lista__item">Busca "Apariencia", "Temas", o "Estilo".</li>
+                            <li class="lista__item">Cambia: 
+                                <ul class="lista">
+                                    <li class="lista__item">Tema del sistema (oscuro, claro, personalizado).</li>
+                                    <li class="lista__item">Tipo de letra.</li>
+                                    <li class="lista__item">Ícono del sistema (pueden cambiar de estilo totalmente).</li>
+                                    <li class="lista__item">Cursores del mouse.</li>
+                                </ul>
+                            </li>
+                            <li class="lista__item">Puedes definir fondos diferentes para el escritorio y la pantalla de bloqueo.</li>
+                        </ol>
+                        <p class="texto">🎨 <i>Sugerencia:</i> Puedes instalar nuevos temas desde la tienda de software o sitios como:</p>
+                        <ol class="lista">
+                            <li class="lista__item"><a href="https://www.gnome-look.org">gnome-look.org</a></li>
+                            <li class="lista__item"><a href="https://www.pling.com/">pling.com</a></li>
+                        </ol>
+                    </div>
+                    <div class="seccion__imagen">
+                        <div class="seccion_imagen--imagen">
+                            <img src="../imagenes2/c2 5.webp">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="seccion">
+                    <div class="seccion__textos">
+                        <h3 class="subtitulo">🧱 Organizar la bara de tareas (o panel)</h3>
+                        <p class="texto">Las barras o paneles (como la que está abajo o arriba de la pantalla) son completamente configurables.</p>
+                        <ul class="lista">
+                            <li class="lista__item">
+                                <b>Mover la barra:</b> Click derecho sobre ella -> "Configuración del Panel" -> cambiar posición.
+                            </li>
+                            <li class="lista__item">
+                                <b>Añadir accesos rápidos:</b>
+                                <ul class="lista">
+                                    <li class="lista__item">Abre el menú de aplicaciones.</li>
+                                    <li class="lista__item">Arrastra la app hacia la barra.</li>
+                                    <li class="lista__item">O haz click derecho -> "Anclar al panel" o "Añadir al panel".</li>
+                                </ul>
+                            </li>
+                            <li class="lista__item">
+                                <b>Widgets o applets:</b> algunos escritorios permiten agregar reloj, clima, calendario, etc.
+                            </li>
+                        </ul>
+                        <p class="texto">🎨 <i>Sugerencia:</i> Puedes instalar nuevos temas desde la tienda de software o sitios como:</p>
+                        <ol class="lista">
+                            <li class="lista__item"><a href="https://www.gnome-look.org">gnome-look.org</a></li>
+                            <li class="lista__item"><a href="https://www.pling.com/">pling.com</a></li>
+                        </ol>
+                    </div>
+                    <div class="seccion__imagen">
+                        <div class="seccion_imagen--imagen">
+                            <img src="../imagenes2/c2 4.webp">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="seccion">
+                    <div class="seccion__textos">
+                        <h3 class="subtitulo">✨ Activar o desactivar efectos visuales</h3>
+                        <p class="texto">Linux puede tener efectos animados y transparencias, pero también puedes desactivarlos si quieres un sistema más fluido (ideal para computadoras con pocos recursos).</p>
+                        <ul class="lista">
+                            <li class="lista__item">
+                                En entornos como KDE o GNOME:
+                                <ul class="lista">
+                                    <li class="lista__item">
+                                        Ve a <b>Configuración -> <b>Apariencia</b> -> <b>Efectos</b> o <b>Rendimiento</b></b>
+                                    </li>
+                                    <li class="lista__item">Puedes ajustar:
+                                        <ul class="lista">
+                                            <li class="lista__item">Transiciones suaves.</li>
+                                            <li class="lista__item">Sombras.</li>
+                                            <li class="lista__item">Ventanas animadas.</li>
+                                            <li class="lista__item">Transparencia de paneles.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <p class="texto">🔋 <i>Recomendación:</i> si notas que el sistema va lento, prueba desactivarlos para mejorar el rendimiento.</p>
+                        <ol class="lista">
+                            <li class="lista__item"><a href="https://www.gnome-look.org">gnome-look.org</a></li>
+                            <li class="lista__item"><a href="https://www.pling.com/">pling.com</a></li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="seccion">
+                    <div class="seccion__textos">
+                        <h3 class="subtitulo">🖥️ Personalización en distros populares</h3>
+                        <p class="texto">🔶 Ubuntu (GNOME).</p>
+                        <ul class="lista">
+                            <li class="lista__item">Tiene un diseño simple y moderno.</li>
+                            <li class="lista__item">Puedes cambiar el fondo, tema claro/oscuro y tamaño de íconos desde <b>Configuración</b> -> <b>Apariencia</b></li>
+                            <li class="lista__item">Para opciones más avanzadas (como mover botones de ventana, fuentes o animaciones), puedes instalar la herramienta GNOME Teaks.</li>
+                        </ul>
+                        
+                        <p class="texto">🍃 Linux Mint (Cinnamon)</p>
+                        <ul class="lista">
+                            <li class="lista__item">Muy intuitivo para nuevos usuarios, con menú estilo Windows.</li>
+                            <li class="lista__item">Personaliza desde el <b>Menú</b> -> <b>Preferencias</b> -> <b>Temas o Fondos.</b></li>
+                            <li class="lista__item">Puedes cambiar paneles, íconos, temas y efectos desde los propios menús sin isntalar nada extra.</li>
+                        </ul>
+
+                        <p class="texto">🧊 Zorin OS</p>
+                        <ul class="lista">
+                            <li class="lista__item">Ideal si vienes de Windows o macOS.</li>
+                            <li class="lista__item">Usa la herramienta Zorin Appearance para cambiar completamente el estilo visual.</li>
+                            <li class="lista__item">Permite modificar el diseño del panel, íconos, tipo de escritorio y mucho más con solo unos clicks.</li>
+                        </ul>
+
+                        <p class="texto">🧩 KDE Plasma</p>
+                        <ul class="lista">
+                            <li class="lista__item">Uno de los entornos más flexibles y personalizables.</li>
+                            <li class="lista__item">Ve a <b>Preferencias del Sistema</b> -> <b>Estilo Global</b> para elegir entre temas completos.</li>
+                            <li class="lista__item">Puedes personalizar cada detalle: ventana, animaciones, barra, íconos, cursores, etc.</li>
+                        </ul>
+
+                        <p class="texto">💡 <i>Tip Extra:</i> Si no encuentras una opción en tu distro, busca en la tienda de software "temas", "configurador", "ajustes de apariencia" o revisa en la app de configuracion.</p>
+                        <ol class="lista">
+                            <li class="lista__item"><a href="https://www.gnome-look.org">gnome-look.org</a></li>
+                            <li class="lista__item"><a href="https://www.pling.com/">pling.com</a></li>
+                        </ol>
+                    </div>
+                    <div class="seccion__imagen">
+                        <div class="seccion_imagen--imagen">
+                            <img src="../imagenes2/c2 3.webp">
+                        </div>
+                    </div>
+                </div>
+                <button data-seccion="2" data-boton="anterior" class="btn btn-anterior"><img src="../imagenes2/icons8-go-back-50.webp" alt="Atras"></button>
+                <button data-seccion="2" data-boton="siguiente" class="btn btn-siguiente"><img src="../imagenes2/icons8-siguiente-100.webp" alt="Siguiente"></button>
+            </section> <!-- CURSO 2 SECCION 2-->
+
+            <section class="seccionCurso" data-seccion="3" data-idCurso="2">
+                <div class="seccion">
+                    <div class="seccion__textos">
+                        <h2 class="titulo titulo-principal">Internet, Red y Conectividad</h2>
+                        <p class="subtitulo">🔌 Conexión por Cable (Ethernet)</p>
+                        <ul class="lista intro">
+                            <li class="lista__item">Es la forma más simple de conectarse.</li>
+                            <li class="lista__item">Al enchufar el cable de red, la mayoría de distros se conectan automáticamente.</li>
+                            <li class="lista__item">Ideal si quieres mayor estabilidad y velocidad de conexión.</li>
+                        </ul>
+                        <br>
+                        <p class="subtitulo">🛜 Conexión Wi-Fi</p>
+                        <ul class="lista intro">
+                            <li class="lista__item">Haz click en el ícono de red en la barra superior o inferior (según la distro).</li>
+                            <li class="lista__item">Elige tu red Wi-Fi -> Ingresa la contraseña -> ¡Listo!.</li>
+                            <li class="lista__item">Pueds administrar redes conocidas o cambiar contraseñas desde <b>Configuración</b>-> <b>Red</b> -> <b>Wi-Fi</b></li>
+                        </ul>
+                        <br>
+                        <p class="subtitulo">📲 Opciones Avanzadas de Red</p>
+                        <ul class="lista intro">
+                            <li class="lista__item">Entra a <b>Configuración</b> -> <b>Red</b> para ver:
+                                <ol class="lista">
+                                    <li class="lista__item">Dirección IP (automática o manual)</li>
+                                    <li class="lista__item">Servidores DNS (puedes cambiar a 1.1.1.1 o 8.8.8.8 si tu red es lenta)</li>
+                                    <li class="lista__item">Configurar VPN (útil para trabajo o privacidad)</li>
+                                </ol>
+                            </li>
+                            <li class="lista__item">Algunas distros permiten ver estadísticas de tráfico de red o activar modo avión desde aquí.</li>
+                        </ul>
+                    </div>
+                    <div class="seccion__imagen">
+                        <div class="seccion_imagen--imagen">
+                            <img src="../imagenes2/c2 8.webp">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="seccion">
+                      <div class="seccion__textos">
+                          <p class="subtitulo">📡 Bluetooth</p>
+                          <ul class="lista intro">
+                              <li class="lista__item">Activa y gestiona dispositivos desde <b>Configuración</b> -> <b>Bluetooth</b>.</li>
+                              <li class="lista__item">Puedes emparejar teclados, auriculares, ratones o enviar archivos entre dispositivos.</li>
+                              <li class="lista__item">Asegúrate de tener Bluetooth habilidato y que tu adaptador esté funcionando.</li>
+                          </ul>
+                          <br>
+                        
+                          <p class="subtitulo">📁 Compartir archivos en red</p>
+                          <ul class="lista">
+                              <li class="lista__item">
+                                  Linux puede compartir carpetas fácilmente con otros equipos (incluso con Windows):
+                                  <ol class="lista">
+                                      <li class="lista__item">Haz click derecho en una carpeta -> selecciona <b>"Opciones de Compartición"</b> o <b>"Compartir esta carpeta"</b>.</li>
+                                      <li class="lista__item">Si es la primera vez, puede que el sistema te pida instalar Samba (protocolo para compartir en red)</li>
+                                  </ol>
+                              </li>
+                              <li class="lista__item">En otras PCs de la misma red, podrás acceder a esas carpetas compartidas desde el explorador de archivos.</li>
+                          </ul>
+                          <p class="texto">💡 <b><i>Tip Extra:</i></b> Si tienes problemas para conectarse, reinicia tu red o adapta tu configuración desde el menú de red. Linux gestiona conexiones muy bien, pero algunas tarjetas de red Wi-Fi requieres instalar drivers adicionales (algo que se ve en el módulo de controladores si es necesario)</p>
+                      </div>
+                </div>
+                <button data-seccion="3" data-boton="anterior" class="btn btn-anterior"><img src="../imagenes2/icons8-go-back-50.webp" alt="Atras"></button>
+                <button data-seccion="3" data-boton="siguiente" class="btn btn-siguiente"><img src="../imagenes2/icons8-siguiente-100.webp" alt="Siguiente"></button>
+            </section> <!-- CURSO 2 SECCION 3-->
+
+            <section class="seccionCurso" data-seccion="4" data-idCurso="2">
+                <div class="seccion">
+                    <div class="seccion__textos">
+                        <h2 class="titulo titulo-principal">instalación de aplicaciones (Sin usar la terminal)</h2>
+                        <b>Amplía tu sistema fácilmente sin necesidad de escribir comandos.</b>
+                        <p class="subtitulo">🛍️ Tienda de aplicaciones (Software Center)</p>
+                        <ul class="lista">
+                            <li class="lista__item">Casi todas las distros incluyen una tienda visual donde puedes buscar e instalar programas fácilmente.</li>
+                            <li class="lista__item">Puedes encontrarla con íconos como una bolsa de compras o "Software", "Discover", "Boutique", etc.</li>
+                            <li class="lista__item">Abre la tienda -> Escribe el nombre del programa que buscas -> Presiona "Instalar" -> Espera a que finalice la instalación.</li>
+                        </ul>
+                        <hr>
+                        <p class="subtitulo">🔄 Desinstalar aplicaciones</p>
+                        <ul class="lista">
+                            <li class="lista__item">Desde la misma tienda puedes buscar apps ya instaladas y seleccionar "Eliminar" o "Desinstalar".</li>
+                            <li class="lista__item">También puedes hacerlo desde el menú de "Aplicaciones instaladas" o "Mis programas".</li>
+                        </ul>
+                        <br>
+                        <p class="subtitulo">📦 Formatos de paquetes más comunes</p>
+                        <b class="normal">.deb</b>
+                        <ul class="lista">
+                            <li class="lista__item">Típico en distros como Ubuntu, Debian, Linux Mint.</li>
+                            <li class="lista__item">Se abre como si fuera un instalador (doble click) y usa el gestor de paquetes gráfico.</li>
+                        </ul>
+                        <hr>
+                        <b class="normal">AppImage</b>
+                        <ul class="lista">
+                            <li class="lista__item">Es un archivo <b>portable:</b> no necesita instalación.</li>
+                            <li class="lista__item">Solo dale permisos para ejecutarse -> haz doble click -> ¡y listo!.</li>
+                        </ul>
+                        <hr>
+                        <b class="normal">.Flatpak y Snap</b>
+                        <ul class="lista">
+                            <li class="lista__item">Son formatos universales que funcionan en muchas distros.</li>
+                            <li class="lista__item">Algunas tiendas ya los incluyen, como GNOME Software o KDE Discover.</li>
+                            <li class="lista__item">Permiten instalar versiones actualizadas de apps con más independencia del sistema.</li>
+                        </ul>
+                        <hr>
+                        
+                    </div>
+                    <div class="seccion__imagen">
+                        <div class="margen-top seccion_imagen--imagen">
+                            <img src="../imagenes2/c2 9.webp">
+                        </div>
+                    </div>
+                </div>
+                <button data-seccion="4" data-boton="anterior" class="btn btn-anterior"><img src="../imagenes2/icons8-go-back-50.webp" alt="Atras"></button>
+                <button data-seccion="4" data-boton="siguiente" class="btn btn-siguiente"><img src="../imagenes2/icons8-siguiente-100.webp" alt="Siguiente"></button>
+            </section> <!-- CURSO 2 SECCION 4-->
+
+            <section class="seccionCurso" data-seccion="5" data-idCurso="2">
+                <div class="seccion">
+                    <div class="seccion__textos">
+                        <h2 class="titulo titulo-principal">Recomendaciones finales y buenas prácticas</h2>
+                        <p class="texto intro"><b>Ya diste el primer paso, ahora es momento de disfrutar Linux con confianza y seguridad.</b> <br> Instalar Linux y dar tus primeros pasos no es poca cosa. Ahora que tienes tu sistema funcionando, el siguiente objetivo no es un experto de inmediato, sino sentirte cómodo explorando, aprendiendo y usando tu computadora a tu manera.</p>
+                    </div>
+                    <div class="seccion__imagen">
+                        <div class="seccion_imagen--imagen">
+                            <img src="../imagenes2/c2 7.webp">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="seccion">
+                    <div class="seccion__textos">
+                        <h2 class="titulo">Explora sin miedo</h2>
+                        <p class="texto intro">Linux está hecho para ser personalizable y seguro. Puedes navegar por la configuración del sistema, cambiar temas, íconos tipografías o probar nuevas funciones sin preocuparte por romper algo importante.</p>
+                        <ul class="lista">
+                            <li class="lista__item">¿Un cambio no te gusta? Casi siempre puedes deshacerlo.</li>
+                            <li class="lista__item">¿Tienes dudas sobre algo que hiciste? Reiniciar tu sesión o revisar la configuración suele solucionarlo.</li>
+                        </ul>
+                        <p class="texto"><i>Aprender Linux también es experimentar. Y está bien equivocarse, porque de ahí viene el conocimiento.</i></p>
+                    </div>
+                    <div class="seccion__imagen">
+                        <div class="seccion_imagen--imagen">
+                            <img src="../imagenes2/c2 1.webp">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="seccion">
+                    <div class="seccion__textos">
+                        <h2 class="titulo">🧑‍🤝‍🧑 Únete a la comunidad</h2>
+                        <p class="texto intro">Una de las grandes fortalezas de Linux es su comunidad. No estás solo. Hay miles de personas alrededor del mundo listas para ayudarte y compartir experiencias.</p>
+                        <b>🌐 ¿Dónde buscar ayuda o aprender más?</b>
+                        <ul class="lista">
+                            <li class="lista__item"><a href="https://askubuntu.com/">AskUbuntu</a></li>
+                            <li class="lista__item"><a href="https://www.reddit.com/r/linux4noobs/?rdt=56254">Reddit</a></li>
+                            <li class="lista__item">Foros oficiales de tu distribución</li>
+                            <li class="lista__item">Grupos de Telegram, Discord o Mastodon.</li>
+                            <li class="lista__item">Canales de Youtube, blogs o newsletters.</li>
+                        </ul>
+                        <p class="texto">🧠<i>Consejo: Cuando busques ayuda, describe bien el problema, menciona tu distribución y si hiciste algo antes de que ocurriera.</i></p>
+                    </div>
+                    <div class="seccion__imagen">
+                        <div class="seccion_imagen--imagen">
+                            <img src="../imagenes2/c2 10.webp">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="seccion">
+                    <div class="seccion__textos">
+                        <h2 class="titulo">🔒 Seguridad Personal básica</h2>
+                        <p class="texto intro">No todo lo que encuentras en internet es seguro para tu sistema.</p>
+                        
+                        <ul class="lista">
+                            <li class="lista__item">🚫 Evitar instalar archivos <span class="tecla">.deb</span>, <span class="tecla">.AppImage</span>, scripts o extensiones de sitios poco conocidos.</li>
+                            <li class="lista__item">✅ Usa la tienda de software o páginas oficiales de los proyectos para descargar aplicaciones.</li>
+                            <li class="lista__item">🔐 Linux es seguro por diseño, pero tu también eres parte de esa seguridad.</li>
+                        </ul>
+                    </div>
+                    <div class="seccion__imagen">
+                        <div class="seccion_imagen--imagen">
+                            <img src="../imagenes2/c2 11.webp">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="seccion">
+                    <div class="seccion__textos">
+                        <h2 class="titulo titulo-principal">🎉 ¡Bienvenido al mundo Linux!</h2>
+                        <p class="texto intro">Has aprendido lo más importante: sentirte dueño de tu sistema.</p>
+                        <b>Ahora puedes:</b>
+                        <ul class="lista">
+                            <li class="lista__item">✅ Navegar y personalizar tu entorno.</li>
+                            <li class="lista__item">✅ Entender cómo funcionan las aplicaciones y el sistema de archivos.</li>
+                            <li class="lista__item">✅ Solucionar problemas básicos y buscar ayuda correctamente.</li>
+                            <li class="lista__item">✅ Disfrutar de un sistema rápido, seguro y libre.</li>
+                        </ul>
+                        <p class="texto intro">
+                            👏 ¡Felicidades! Este es solo el comienzo. Linux no es un destino, es un camino que se adapta a ti.
+                        </p>
+                    </div>
+                    <div class="seccion__imagen">
+                        <div class="seccion_imagen--imagen">
+                            <img src="../imagenes2/c2 12.webp">
+                        </div>
+                    </div>
+                </div>
+                <button data-seccion="4" data-boton="anterior" class="btn btn-anterior"><img src="../imagenes2/icons8-go-back-50.webp" alt="Atras"></button>
+                <a href="../vistas/index.html" class="btn-final">Finalizar Curso</a>
+            </section> <!-- CURSO 2 SECCION 5-->
+        </div> <!-- Curso 2-->
+
+        <div data-idCurso="3" data-nombre="curso3" class="curso3 curso">      
+            <section class="seccionCurso" data-seccion="1" data-idCurso="3">
+                    <div class="seccion">
+                        <div class="seccion__textos">
+                            <h2 class="titulo titulo-principal">Introducción a la terminal</h2>
+                            <p class="texto intro">
+                                La terminal es una interfaz de texto donde pueds interactuar directamente con tu sistema operativo. <br> En lugar de hacer click en íconos o ventanas, aquí escribes comandos para ejecutar acciones. <br> Esto puede sonar intimidante al principio, pero una vez que te acostumbras, verás que es rápido, potente y muy eficiente.
+                            </p>
+                            <br>
+                            <h3 class="subtitulo">💬 Terminal, Consola y Shell: ¿Es lo mismo?</h3>
+                            <p class="texto">Estos términos suelen confundirse, pero aquí te explicamos de forma sencilla:</p>
+                            <ul class="lista">
+                                <li class="lista__item"><b>Terminal:</b> El programa que abre una ventana para que puedas escribir comandos. Es la "pantalla" donde escribes.</li>
+                                <li class="lista__item"><b>Consola:</b> Término más antiguo, que hace referencia a las terminales físicas (como pantalla negra en computadoras viejas).</li>
+                                <li class="lista__item"><b>Shell:</b> El programa que interpreta los comandos que escribes. Es quien realmente ejcuta lo que tú le dices.</li>
+                            </ul>
+                        </div>
+                        <div class="seccion__imagen">
+                            <div class="seccion_imagen--imagen">
+                                <img src="../imagenes2/c3 1.webp">
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="seccion">
+                        <div class="seccion__textos">
+                            <h3 class="subtitulo">🐚 ¿Qué es Bash? ¿Hay otros shells?</h3>
+                            <p class="texto">
+                                Bash (Bourne Again SHell) es el shell más común en distribuciones Linux. <br> cuando abres una terminal y escribes comandos como <span class="tecla">ls</span>, <span class="tecla">cd</span>, <span class="tecla">mkdir</span>, etc. probablemente estás usando Bash.
+                            </p>
+                            <p class="texto">Otros shells que existen:</p>
+                            <ul class="lista">
+                                <li class="lista__item"><b>Zsh:</b> muy personalizable, se usa mucho con <span class="tecla">oh-my-zsh</span>.</li>
+                                <li class="lista__item"><b>Fish:</b> más amigable con el usuario, con sugerencias automáticas.</li>
+                                <li class="lista__item"><b>Dash:</b> más rápido, usado en algunos scripts del sistema.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="seccion__imagen">
+                            <div class="seccion_imagen--imagen">
+                                <img src="../imagenes2/c3 2.webp">
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="seccion">
+                        <div class="seccion__textos">
+                            <h3 class="titulo titulo-principal">🧱 Estructura de un comando</h3>
+                            <p class="texto">Cuando escribes un comando, casi siempre tiene esta forma:</p>
+                            <div class="terminal">
+                                <div class="terminal__bar">
+                                    <span>bash</span>
+                                    <button class="terminal__btn">Copiar Código</button>
+                                </div>
+                                <pre class="terminal__contenido"> <code>
+<span class="comando">comando</span> [opciones] [argumentos]
+                                </code></pre>
+                            </div>
+                            <br><br>
+                            <p class="texto">🔎 Ejemplo:</p>
+                            <div class="terminal">
+                                <div class="terminal__bar">
+                                    <span>bash</span>
+                                    <button class="terminal__btn">Copiar Código</button>
+                                </div>
+                                <pre class="terminal__contenido"> <code>
+<span class="comando">ls</span> -l /home
+                                </code></pre>
+                            </div><br>
+                            <ul class="lista">
+                                <li class="lista__item"><span class="tecla">ls</span>: es el comando (listar archivos).</li>
+                                <li class="lista__item"><span class="tecla">-l</span>: es una opción (lista detallada).</li>
+                                <li class="lista__item"><span class="tecla">/home</span>: es el argumento (el directorio que quieres listar).</li>
+                            </ul>
+                            <p class="texto">🧠 Puedes usar varias opciones juntar: <span class="tecla">ls -la</span> (lista archivos, incluso ocultos, en forma detallada).</p>
+                        </div>
+                        <div class="seccion__imagen">
+                            <div class="seccion_imagen--imagen">
+                                <img src="../imagenes2/c3 3.webp">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="seccion">
+                        <div class="seccion__textos">
+                            <h3 class="subtitulo">📁 Tipos de terminal según el entorno gráfico</h3>
+                            <p class="texto">Dependiendo de tu entorno de escritorio (GNOME, DKE, XFCE...), tu terminal tendrá diferentes nombres:</p>
+                            <ul class="lista">
+                                <li class="lista__item"><b>Gnome Terminal (Ubuntu, Fedora con GNOME).</b></li>
+                                <li class="lista__item"><b>Konsole</b> (KDE Plasma)</li>
+                                <li class="lista__item"><b>Xfce Terminal</b> (en XCFE)</li>
+                                <li class="lista__item"><B>Tilix, Alacritty, Terminator (alternativas que puedes instalar)</B></li>
+                            </ul>
+                            <p class="texto">Todas hacen lo mismo: te permiten interactuar con tu shell.</p>
+                            <br><br>
+                            <h3 class="subtitulo">🧠 Consejo de otro para principiantes</h3>
+                            <p class="texto">Si tienes miedo de "romper algo", tranquilo: mientras por el momento no uses comandos como <span class="tecla">sudo</span> o <span class="tecla">rm -rf /</span>, no hay peligro real. Puedes practicar, equivocarte y aprender sin dañar el sistema.</p>
+                        </div>
+                        <div class="seccion__imagen">
+                            <div class="seccion_imagen--imagen">
+                                <img src="../imagenes2/c3 4.webp">
+                            </div>
+                        </div>
+                    </div>
+                    <button data-seccion="1" data-boton="siguiente" class="btn btn-siguiente"><img src="../imagenes2/icons8-siguiente-100.webp" alt="Siguiente"></button>
+                <button data-seccion="1" data-boton="siguiente" class="btn btn-siguiente"><img src="../imagenes2/icons8-siguiente-100.webp" alt="Siguiente"></button>
+            </section> <!-- CURSO 3 SECCION 1-->
+
+            <section class="seccionCurso" data-seccion="2" data-idCurso="3">
+                <div class="seccion">
+                    <div class="seccion__textos">
+                        <h3 class="titulo titulo-principal">📁 Navegación y exploración del sistema</h3>
+                        <p class="texto">🔎 <i>Mueve por el sistema como un ninja.</i></p>
+                        <p class="texto intro">Una de las habilidades más importantes al usar Linux es saber moverte entre carpetas y encontrar lo que necesitas rápidamente. Este módulo te enserñará justo eso: cómo explorar tu sistema con soltura desde la terminal, con atajos y trucos que te ahorarrán tiempo.</p>
+                    </div>
+                    <div class="seccion__imagen">
+                        <div class="seccion_imagen--imagen">
+                            <img src="../imagenes2/c3 5.webp">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="seccion">
+                    <div class="seccion__textos">
+                        <h3 class="titulo">Comandos básicos para moverse</h3>
+                        <b><span class="tecla normal">pwd</span></b>
+                        <p class="texto">Muestra en qué carpeta estás actualmente. <br> <i>🧠 Piensa en esto como tu GPS interno dentro del sistema.</i></p>
+                        <div class="terminal">
+                            <div class="terminal__bar">
+                                <span>bash</span>
+                                <button class="terminal__btn">Copiar Código</button>
+                            </div>
+                            <pre class="terminal__contenido"> <code>
+<span class="comando">pwd</span> [opciones] [argumentos]
+                            </code></pre>
+                        </div><br>
+                        <p class="texto">Ejemplo de salida:</p>
+                        <div class="terminal">
+                            <div class="terminal__bar">
+                                <span>bash</span>
+                                <button class="terminal__btn">Copiar Código</button>
+                            </div>
+                            <pre class="terminal__contenido"> <code>
+/home/usuario/Documentos
+                            </code></pre>
+                        </div>
+                        <br><hr><br><br>
+                        <b><span class="tecla normal margen-top">ls</span></b><br><br>
+                        <p class="texto">Lista los archivos y carpetas dentro del directorio actual.</p>
+                        <div class="terminal">
+                            <div class="terminal__bar">
+                                <span>bash</span>
+                                <button class="terminal__btn">Copiar Código</button>
+                            </div>
+                            <pre class="terminal__contenido"> <code>
+<span class="comando">ls</span>
+                            </code></pre>
+                    </div>
+                    <hr><br><br>
+                    <b><span class="tecla normal">cd</span></b><br><br>
+                        <p class="texto">Te permite cambiar de carpeta (cd = change directory).</p>
+                        <div class="terminal">
+                            <div class="terminal__bar">
+                                <span>bash</span>
+                                <button class="terminal__btn">Copiar Código</button>
+                            </div>
+                            <pre class="terminal__contenido"> <code>
+<span class="comando">cd</span> Descargas
+<span class="comando">cd</span> /home/usurio/Música
+                            </code></pre>
+                        </div>
+                        <p class="texto">Para volver atrás:</p>
+                        <div class="terminal">
+                            <div class="terminal__bar">
+                                <span>bash</span>
+                                <button class="terminal__btn">Copiar Código</button>
+                            </div>
+                            <pre class="terminal__contenido"> <code>
+<span class="comando">cd</span> ..
+                            </code></pre>
+                        </div>
+                        <p class="texto">Para ir a tu carpeta personal:</p>
+                        <div class="terminal">
+                            <div class="terminal__bar">
+                                <span>bash</span>
+                                <button class="terminal__btn">Copiar Código</button>
+                            </div>
+                            <pre class="terminal__contenido"> <code>
+<span class="comando">cd</span> ~
+                            </code></pre>
+                        </div>
+                    <div class="seccion__imagen">
+                        <div class="seccion_imagen--imagen">
+                            <img src="../imagenes2/c3 6.webp">
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="seccion">
+                    <div class="seccion__textos">
+                        <h3 class="subtitulo">📂 <i>Listar con estilo: opciones útiles de <span class="tecla normal">ls</span></i></h3>
+                        
+                        <ul class="lista">
+                            <li class="lista__item"><span class="tecla">ls -l</span> -> Muestra detalles como permisos, propietario, tamaño y fecha.</li>
+                            <li class="lista__item"><span class="tecla">ls -a</span> -> Incluye archivos ocultos (los que empiezan con <span class="tecla">.</span>).</li>
+                            <li class="lista__item"><span class="tecla">ls -lh</span> -> Igual que <span class="tecla">-l</span>, pero con tamaños "legibles" (KB, MB...).</li>
+                        </ul>
+                        <div class="terminal">
+                            <div class="terminal__bar">
+                                <span>bash</span>
+                                <button class="terminal__btn">Copiar Código</button>
+                            </div>
+                            <pre class="terminal__contenido"> <code>
+<span class="comando">ls</span> -lah
+                            </code></pre>
+                        </div>
+                    </div>
+                    <div class="seccion__imagen">
+                        <div class="seccion_imagen--imagen">
+                            <img src="../imagenes2/c3 7.webp">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="seccion">
+                    <div class="seccion__textos">
+                        <h3 class="subtitulo">📂 Rutas absolutas Vs relativas</h3>
+                        
+                        <ul class="lista">
+                            <li class="lista__item"><b>Ruta Absoluta</b>: comienza desde la raíz (<span class="tecla">/</span>). Ej: <span class="tecla">/home/usuario/Documentos</span></li>
+                            <li class="lista__item"><b>Ruta Relativa</b>: Desde estás actualmente. Ej: <span class="tecla">../Imágenes</span></li>
+                        </ul>
+                        <p class="texto">📌 Usar la ruta adecuada te ayuda a evitar errores, sobre todo al copiar o mover archivos.</p>
+                        <hr>
+                        <h3 class="subtitulo">📂 Autocompletado con TAB</h3>
+                        <p class="texto">Cuando escribes una ruta o comando, presiona <span class="tecla">TAB</span> y Linux completará automáticamente lo que sea posible.</p>
+                        <div class="terminal">
+                            <div class="terminal__bar">
+                                <span>bash</span>
+                                <button class="terminal__btn">Copiar Código</button>
+                            </div>
+                            <pre class="terminal__contenido"> <code>
+<span class="comando">cd</span> Doc[TAB]
+<span># Se completa a "Documentos" si existe esa carpeta</span>
+                            </code></pre>
+                        </div>
+                        <p class="texto">⚡ Súper útil para ahorrar tiempo y evitar errores de escritura.</p>
+                    </div>
+                    <div class="seccion__imagen">
+                        <div class="seccion_imagen--imagen">
+                            <img src="../imagenes2/c3 8.webp">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="seccion">
+                    <div class="seccion__textos">
+                        <h3 class="subtitulo">📜 Historial y reutilización de comandos</h3>
+                        
+                        <ul class="lista">
+                            <li class="lista__item"><span class="tecla">history</span>: muestra todos los comandos que has usado recientemente.</li>
+                            <li class="lista__item"><span class="tecla">!!</span>: Repite el último comando.</li>
+                            <li class="lista__item"><span class="tecla">!número</span>: Ejecuta el comando en esa posición del historial.</li>
+                        </ul>
+                        <p class="texto">Ejemplo:</p>
+                        <div class="terminal">
+                            <div class="terminal__bar">
+                                <span>bash</span>
+                                <button class="terminal__btn">Copiar Código</button>
+                            </div>
+                            <pre class="terminal__contenido"> <code>
+!45
+                            </code></pre>
+                        </div>
+                        <p class="texto">🔁 Ejecuta el comando número 45 del historial.</p>
+                        <hr><br><br>
+                        <h3 class="subtitulo">🧠 Consejo ninja:</h3>
+                        <p class="texto"><b class="normal"><i>Practica navegar sin usar el mouse ni el entorno gráfico.</b></i> Al principio cuesta un poco, pero en poco tiempo tu velocidad en la terminal se multiplicará. Piensa en esto como aprender atajos en un videojuego.</p>
+                    </div>
+                    <div class="seccion__imagen">
+                        <div class="seccion_imagen--imagen">
+                            <img src="../imagenes2/c3 9.webp">
+                        </div>
+                    </div>
+                </div>
+
+                <button data-seccion="2" data-boton="anterior" class="btn btn-anterior"><img src="../imagenes2/icons8-go-back-50.webp" alt="Atras"></button>
+                <button data-seccion="2" data-boton="siguiente" class="btn btn-siguiente"><img src="../imagenes2/icons8-siguiente-100.webp" alt="Siguiente"></button>
+            </section>  <!-- CURSO 3 SECCION 2-->
+
+            <section class="seccionCurso" data-seccion="3" data-idCurso="3">
+                <div class="seccion">
+                    <div class="seccion__textos">
+                        <h2 class="titulo titulo-principal">🗃️ Gestion de archivos y directorios</h2>
+                        <p class="texto"><i>🛠️ Crea, elimina, mueve y organiza tus archivos desde la terminal.</i></p>
+                        <p class="texto">Aquí es donde empieza la verdadera magia. Aprenderás a gestionar tu sistema sin necesidad de un explorador gráfico. Todo esto te dará velocidad, precisión y más control.</p>
+                    </div>
+                    <div class="seccion__imagen">
+                        <div class="seccion_imagen--imagen">
+                            <img src="../imagenes2/c3 10.webp">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="seccion">
+                    <div class="seccion__textos">
+                        <h3 class="subtitulo">📄 Crear archivos y carpetas.</h3>
+                        <p class="texto margen-top"><span class="tecla">touch</span></p>
+                        <p class="texto">Con este comando puedes crear archivos vacíos.</p>
+                        <div class="terminal">
+                            <div class="terminal__bar">
+                                <span>bash</span>
+                                <button class="terminal__btn">Copiar Código</button>
+                            </div>
+                            <pre class="terminal__contenido"> <code>
+<span class="comando">touch</span> notas.txt
+                            </code></pre>
+                        </div>
+                        <p class="texto">También puedes crear varios archivos a la vez.</p>
+                        <div class="terminal">
+                            <div class="terminal__bar">
+                                <span>bash</span>
+                                <button class="terminal__btn">Copiar Código</button>
+                            </div>
+                            <pre class="terminal__contenido"><code>
+<span class="comando">touch</span> archivo1.txt archivo2.txt
+                            </code></pre>
+                        </div>
+                        <hr>
+                        <p class="texto margen-top"><span class="tecla">mkdir</span></p>
+                        <p class="texto">Con este comando puedes crear carpetas (directorios).</p>
+                        <div class="terminal">
+                            <div class="terminal__bar">
+                                <span>bash</span>
+                                <button class="terminal__btn">Copiar Código</button>
+                            </div>
+                            <pre class="terminal__contenido"> <code>
+<span class="comando">touch</span> archivo1.txt archivo2.txt
+                            </code></pre>
+                        </div>
+                        <hr>
+                        <p class="texto margen-top"><span class="tecla">mkdir</span></p>
+                        <p class="texto">Con este comando puedes crear carpetas (directorios).</p>
+                        <div class="terminal">
+                            <div class="terminal__bar">
+                                <span>bash</span>
+                                <button class="terminal__btn">Copiar Código</button>
+                            </div>
+                            <pre class="terminal__contenido"> <code>
+<span class="comando">mkdir</span> proyectos
+<span class="comando">mkdir</span> -p proyectos/2025/abril
+                            </code></pre>
+                        </div>
+                        <p class="texto"><span class="tecla">-p</span> permite crear varias carpetas anidadas de un solo golpe.</p>
+                        <hr>
+                        <h3 class="subtitulo">🗑️ Eliminar archivos y carpetas.</h3>
+                        <p class="texto margen-top"><span class="tecla">rm</span></p>
+                        <p class="texto">Puedes borrar archivos con este comando.</p>
+                        <div class="terminal">
+                            <div class="terminal__bar">
+                                <span>bash</span>
+                                <button class="terminal__btn">Copiar Código</button>
+                            </div>
+                            <pre class="terminal__contenido"> <code>
+<span class="comando">rm</span> archivo.txt
+                            </code></pre>
+                        </div>
+                        <p class="texto margen-top"><span class="tecla">rmdir</span></p>
+                        <p class="texto">Y con este otro comando puedes elimnar carpetas vacías.</p>
+                        <div class="terminal">
+                            <div class="terminal__bar">
+                                <span>bash</span>
+                                <button class="terminal__btn">Copiar Código</button>
+                            </div>
+                            <pre class="terminal__contenido"> <code>
+<span class="comando">rmdir</span> carpeta_vacia
+                            </code></pre>
+                        </div>
+                        <p class="texto margen-top"><span class="tecla">rm -r</span></p>
+                        <p class="texto">Y por último, con este comando puedes borrar carpetas con todo su contenido dentro.</p>
+                        <div class="terminal">
+                            <div class="terminal__bar">
+                                <span>bash</span>
+                                <button class="terminal__btn">Copiar Código</button>
+                            </div>
+                            <pre class="terminal__contenido"> <code>
+<span class="comando">rm</span> -r carpeta_con_archivos/
+                            </code></pre>
+                        </div>
+                        <p class="texto">⚠️ ¡Cuidado! Este comando no pregunta, borra todo sin aviso. Úsalo con cuidado y responsabilidad.</p>
+                        <hr>
+                        <h3 class="subtitulo">✨ Comodines y patrones</h3>
+                        <ul class="lista">
+                            <li class="margen_top lista__item"><span class="tecla">*</span> -> Cualquier cosa (cero o más caracteres). <br> Ej: <span class="tecla">rm *.txt</span> borra todos los archivos <span class="tecla">.txt</span>.</li>
+                            <li class="margen_top lista__item"><span class="tecla">?</span> -> Cualquier un solo carácter.<br> Ej: <span class="tecla">archivo?.txt</span> encuentra <span class="tecla">archivo1.txt</span>, <span class="tecla">archivoA.txt</span>, etc.</li>
+                            <li class="margen_top lista__item"><span class="tecla">[ ]</span> -> Lista de caracteres. <br> Ej: <span class="tecla">archivo[1-3].txt</span> encuentra <span class="tecla">archivo1.txt, </span> <span class="tecla">archivo2.txt</span> y <span class="tecla">archivo3.txt</span>.</li>
+                        </ul>
+                        <p class="texto">🔎 Útil para trabajar con muchos archivos a la vez.</p>
+                        <hr>
+                        <h3 class="subtitulo">📚 Visualizar contenido</h3>
+                        <p class="texto"><span class="tecla">cat</span></p>
+                        <p class="texto">Muestra el contenido de un archivo.</p>
+                        <div class="terminal">
+                            <div class="terminal__bar">
+                                <span>bash</span>
+                                <button class="terminal__btn">Copiar Código</button>
+                            </div>
+                            <pre class="terminal__contenido"> <code>
+<span class="comando">cat</span> notas.txt
+                            </code></pre>
+                        </div>
+                        <hr>
+                        <p class="texto margen-top"><span class="tecla">less</span></p>
+                        <p class="texto">Permite navegar dentro del archivo (subir, bajar con flechas o PgUp/PgDn).</p>
+                        <div class="terminal">
+                            <div class="terminal__bar">
+                                <span>bash</span>
+                                <button class="terminal__btn">Copiar Código</button>
+                            </div>
+                            <pre class="terminal__contenido"> <code>
+<span class="comando">less</span> texto_largo.txt
+                            </code></pre>
+                        </div>
+                        <p class="texto">Presiona <span class="tecla">q</span> para salir.</p>
+                        <hr>
+                        <p class="texto margen-top"><span class="tecla">head</span> y <span class="tecla">tail</span></p>
+                        <p class="texto">Muestra las primeras o últimas líneas de un archivo.</p>
+                        <div class="terminal">
+                            <div class="terminal__bar">
+                                <span>bash</span>
+                                <button class="terminal__btn">Copiar Código</button>
+                            </div>
+                            <pre class="terminal__contenido"> <code>
+<span class="comando">head</span> archivo.txt
+<span class="comando">tail</span> archivo.txt
+                            </code></pre>
+                        </div>
+                        <p class="texto">También puedes usar <span class="tecla">-n</span> para definir cuántas líneas.</p>
+                        <div class="terminal">
+                            <div class="terminal__bar">
+                                <span>bash</span>
+                                <button class="terminal__btn">Copiar Código</button>
+                            </div>
+                            <pre class="terminal__contenido"> <code>
+<span class="comando">head</span> -n 5 archivo.txt
+                            </code></pre>
+                        </div>
+                        <hr>
+                        <p class="texto margen-top"><span class="tecla">file</span></p>
+                        <p class="texto">Te dice qué tipo de archivo es: texto, imagen, ejecutable, etc.</p>
+                        <div class="terminal">
+                            <div class="terminal__bar">
+                                <span>bash</span>
+                                <button class="terminal__btn">Copiar Código</button>
+                            </div>
+                            <pre class="terminal__contenido"> <code>
+<span class="comando">file</span> archivo.pdf
+<span class="comando">file</span> imagen.webp
+                            </code></pre>
+                        </div>
+                        <hr>
+                        <h3 class="subtitulo">💡 Tip:</h3>
+                        <p class="texto">Todo lo que puedes hacer con clicks, puedes hacerlo más rápido desde la terminal. <br>Empieza con tareas sencillas y verás cómo se vuelve natural con la práctica.</p>
+                    </div>
+                    <div class="seccion__imagen">
+                        <div class="seccion_imagen--imagen">
+                            <img src="../imagenes2/c3 11.webp">
+                        </div>
+                    </div>
+                </div>
+
+                <button data-seccion="3" data-boton="anterior" class="btn btn-anterior"><img src="../imagenes2/icons8-go-back-50.webp" alt="Atras"></button>
+                <button data-seccion="3" data-boton="siguiente" class="btn btn-siguiente"><img src="../imagenes2/icons8-siguiente-100.webp" alt="Siguiente"></button>
+            </section> <!-- CURSO 3 SECCION 3-->
+
+            <section class="seccionCurso" data-seccion="4" data-idCurso="3">
+                <div class="seccion">
+                    <div class="seccion__textos">
+                        <h3 class="titulo titulo-principal">🔐 Permisos y Propiedad</h3>
+                        
+                        <p class="texto margen-top"><span class="tecla">ls -l</span></p>
+                        <p class="texto">Muestra los permisos y la propiedad de los archivos en un directorio.</p>
+                        <div class="terminal">
+                            <div class="terminal__bar">
+                                <span>bash</span>
+                                <button class="terminal__btn">Copiar Código</button>
+                            </div>
+                            <pre class="terminal__contenido"><code>
+<span class="comando">ls</span> -l
+                            </code></pre>
+                        </div>
+                
+                        <p class="texto">La salida muestra los permisos en formato <span class="tecla">rwx</span> (lectura, escritura, ejecución) para usuario, grupo y otros.</p>
+                        <p class="texto">Ejemplo de salida:</p>
+                        <div class="terminal">
+                            <div class="terminal__bar">
+                                <span>bash</span>
+                            </div>
+                            <pre class="terminal__contenido"><code>
+-rw-r--r-- 1 usuario grupo 1234 abr 13 12:00 archivo.txt
+                            </code></pre>
+                        </div>
+                        <hr>
+                
+                        <p class="texto margen-top"><span class="tecla">chmod</span></p>
+                        <p class="texto">Cambia los permisos de un archivo o carpeta. Puedes usar el modo simbólico o numérico (octal).</p>
+                        <div class="terminal">
+                            <div class="terminal__bar">
+                                <span>bash</span>
+                                <button class="terminal__btn">Copiar Código</button>
+                            </div>
+                            <pre class="terminal__contenido"><code>
+<span class="comando">chmod</span> u+x script.sh
+<span class="comando">chmod</span> 755 script.sh
+                            </code></pre>
+                        </div>
+                        <p class="texto">✍️ <span class="tecla">u</span>: usuario | <span class="tecla">g</span>: grupo | <span class="tecla">o</span>: otros | <span class="tecla">a</span>: todos</p>
+                        <p class="texto">📊 Números comunes: <span class="tecla">7 = rwx</span>, <span class="tecla">6 = rw-</span>, <span class="tecla">5 = r-x</span>, <span class="tecla">4 = r--</span></p>
+                        <hr>
+                
+                        <p class="texto margen-top"><span class="tecla">chown</span> y <span class="tecla">chgrp</span></p>
+                        <p class="texto">Cambia el propietario o el grupo de un archivo.</p>
+                        <div class="terminal">
+                            <div class="terminal__bar">
+                                <span>bash</span>
+                                <button class="terminal__btn">Copiar Código</button>
+                            </div>
+                            <pre class="terminal__contenido"><code>
+<span class="comando">chown</span> nuevo_usuario archivo.txt
+<span class="comando">chown</span> nuevo_usuario:nuevo_grupo archivo.txt
+<span class="comando">chgrp</span> nuevo_grupo archivo.txt
+                            </code></pre>
+                        </div>
+                        <p class="texto">🔐 Solo el administrador (root) o el propietario actual pueden hacer esto.</p>
+                        <hr>
+                
+                        <p class="texto margen-top"><span class="tecla">umask</span></p>
+                        <p class="texto">Define los permisos por defecto para nuevos archivos y carpetas.</p>
+                        <div class="terminal">
+                            <div class="terminal__bar">
+                                <span>bash</span>
+                                <button class="terminal__btn">Copiar Código</button>
+                            </div>
+                            <pre class="terminal__contenido"><code>
+<span class="comando">umask</span>
+<span class="comando">umask</span> 022
+                            </code></pre>
+                        </div>
+                        <p class="texto">Una umask de <span class="tecla">022</span> genera archivos con permisos <span class="tecla">644</span> y carpetas con <span class="tecla">755</span>.</p>
+                        <p class="texto">ℹ️ La umask resta permisos a los valores por defecto.</p>
+                
+                        <hr>
+                        <h3 class="subtitulo">💡 Tip:</h3>
+                        <p class="texto">Controlar permisos es esencial para proteger tu sistema. Practica con archivos de prueba antes de aplicarlo en proyectos reales.</p>
+                    </div>
+                    <div class="seccion__imagen">
+                        <div class="seccion_imagen--imagen">
+                            <img src="../imagenes2/c3 12.webp">
+                        </div>
+                    </div>
+                </div>
+                
+                <button data-seccion="4" data-boton="anterior" class="btn btn-anterior"><img src="../imagenes2/icons8-go-back-50.webp" alt="Atras"></button>
+                <button data-seccion="4" data-boton="siguiente" class="btn btn-siguiente"><img src="../imagenes2/icons8-siguiente-100.webp" alt="Siguiente"></button>
+
+            </section> <!-- CURSO 3 SECCION 4-->
+
+            <section class="seccionCurso" data-seccion="5" data-idCurso="3">
+                <div class="seccion">
+                    <div class="seccion__textos">
+                        <h2 class="titulo titulo-principal">🧪 Comandos Útiles para el Día a Día</h2>
+                
+                        <p class="texto margen-top"><span class="tecla">find</span> y <span class="tecla">locate</span></p>
+                        <p class="texto">Ambos buscan archivos, pero <span class="tecla">find</span> lo hace en tiempo real y <span class="tecla">locate</span> usa una base de datos.</p>
+                        <div class="terminal">
+                            <div class="terminal__bar"><span>bash</span><button class="terminal__btn">Copiar Código</button></div>
+                            <pre class="terminal__contenido"><code>
+<span class="comando">find</span> . -name archivo.txt
+<span class="comando">locate</span> archivo.txt
+                            </code></pre>
+                        </div>
+                        <hr>
+                
+                        <p class="texto margen-top"><span class="tecla">grep</span> y <span class="tecla">grep -r</span></p>
+                        <p class="texto">Busca texto dentro de archivos. <span class="tecla">-r</span> busca de forma recursiva en carpetas.</p>
+                        <div class="terminal">
+                            <div class="terminal__bar"><span>bash</span><button class="terminal__btn">Copiar Código</button></div>
+                            <pre class="terminal__contenido"><code>
+<span class="comando">grep</span> "Hola" archivo.txt
+<span class="comando">grep</span> -r "Error" logs/
+                            </code></pre>
+                        </div>
+                        <hr>
+                
+                        <p class="texto margen-top"><span class="tecla">wc</span></p>
+                        <p class="texto">Cuenta líneas, palabras y caracteres.</p>
+                        <div class="terminal">
+                            <div class="terminal__bar"><span>bash</span><button class="terminal__btn">Copiar Código</button></div>
+                            <pre class="terminal__contenido"><code>
+<span class="comando">wc</span> archivo.txt
+<span class="comando">wc</span> -l archivo.txt  <span class="comentario"># Solo líneas</span>
+<span class="comando">wc</span> -w archivo.txt  <span class="comentario"># Solo palabras</span>
+                            </code></pre>
+                        </div>
+                        <hr>
+                
+                        <p class="texto margen-top"><span class="tecla">diff</span></p>
+                        <p class="texto">Compara dos archivos y muestra diferencias línea por línea.</p>
+                        <div class="terminal">
+                            <div class="terminal__bar"><span>bash</span><button class="terminal__btn">Copiar Código</button></div>
+                            <pre class="terminal__contenido"><code>
+<span class="comando">diff</span> archivo1.txt archivo2.txt
+                            </code></pre>
+                        </div>
+                        <hr>
+                
+                        <p class="texto margen-top"><span class="tecla">date</span> y <span class="tecla">cal</span></p>
+                        <p class="texto">Muestra la fecha actual y un calendario.</p>
+                        <div class="terminal">
+                            <div class="terminal__bar"><span>bash</span><button class="terminal__btn">Copiar Código</button></div>
+                            <pre class="terminal__contenido"><code>
+<span class="comando">date</span>
+<span class="comando">cal</span>
+                            </code></pre>
+                        </div>
+                        <hr>
+                
+                        <p class="texto margen-top"><span class="tecla">man</span> y <span class="tecla">--help</span></p>
+                        <p class="texto">Muestra ayuda de comandos. <span class="tecla">man</span> da una guía completa, <span class="tecla">--help</span> da una rápida.</p>
+                        <div class="terminal">
+                            <div class="terminal__bar"><span>bash</span><button class="terminal__btn">Copiar Código</button></div>
+                            <pre class="terminal__contenido"><code>
+<span class="comando">man</span> grep
+<span class="comando">grep</span> --help
+                            </code></pre>
+                        </div>
+                
+                        <p class="texto">📘 Tip: Si no sabes cómo usar un comando, <span class="tecla">man</span> es tu mejor amigo.</p>
+                    </div>
+                    <div class="seccion__imagen">
+                        <div class="seccion_imagen--imagen">
+                            <img src="../imagenes2/c3 13.webp">
+                        </div>
+                    </div>
+                </div>                
+                <button data-seccion="5" data-boton="anterior" class="btn btn-anterior"><img src="../imagenes2/icons8-go-back-50.webp" alt="Atras"></button>
+                <button data-seccion="5" data-boton="siguiente" class="btn btn-siguiente"><img src="../imagenes2/icons8-siguiente-100.webp" alt="Siguiente"></button>
+            </section> <!-- CURSO 3 SECCION 5-->
+
+            <section class="seccionCurso" data-seccion="6" data-idCurso="3">
+                <div class="seccion">
+                    <div class="seccion__textos">
+                        <h2 class="titulo titulo-principal">🔄 Redirecciones, Pipes y Alias</h2>
+            
+                        <p class="texto margen-top"><span class="tecla">&gt;</span> y <span class="tecla">&gt;&gt;</span></p>
+                        <p class="texto">Redirigen la salida de un comando a un archivo. <span class="tecla">&gt;</span> sobrescribe, <span class="tecla">&gt;&gt;</span> agrega.</p>
+                        <div class="terminal">
+                            <div class="terminal__bar"><span>bash</span><button class="terminal__btn">Copiar Código</button></div>
+                            <pre class="terminal__contenido"><code>
+<span class="comando">echo</span> "Hola mundo" > archivo.txt
+<span class="comando">echo</span> "Otra línea" >> archivo.txt
+                            </code></pre>
+                        </div>
+                        <hr>
+            
+                        <p class="texto margen-top"><span class="tecla">&lt;</span></p>
+                        <p class="texto">Redirige la entrada de un archivo a un comando.</p>
+                        <div class="terminal">
+                            <div class="terminal__bar"><span>bash</span><button class="terminal__btn">Copiar Código</button></div>
+                            <pre class="terminal__contenido"><code>
+<span class="comando">sort</span> &lt; archivo.txt
+                            </code></pre>
+                        </div>
+                        <hr>
+            
+                        <p class="texto margen-top"><span class="tecla">|</span> (Pipes)</p>
+                        <p class="texto">Conecta la salida de un comando con la entrada de otro. Ideal para combinar comandos.</p>
+                        <div class="terminal">
+                            <div class="terminal__bar"><span>bash</span><button class="terminal__btn">Copiar Código</button></div>
+                            <pre class="terminal__contenido"><code>
+<span class="comando">cat</span> archivo.txt | <span class="comando">grep</span> "Hola"
+                            </code></pre>
+                        </div>
+                        <hr>
+            
+                        <p class="texto margen-top"><span class="tecla">&&</span>, <span class="tecla">||</span> y <span class="tecla">;</span></p>
+                        <p class="texto"><span class="tecla">&&</span>: ejecuta el segundo comando solo si el primero fue exitoso. <span class="tecla">||</span>: si falla el primero, ejecuta el segundo. <span class="tecla">;</span>: ejecuta todos, sin importar el resultado.</p>
+                        <div class="terminal">
+                            <div class="terminal__bar"><span>bash</span><button class="terminal__btn">Copiar Código</button></div>
+                            <pre class="terminal__contenido"><code>
+<span class="comando">mkdir</span> nueva_carpeta && <span class="comando">cd</span> nueva_carpeta
+<span class="comando">comando1</span> || <span class="comando">echo</span> "Falló"
+<span class="comando">echo</span> "Hola"; <span class="comando">echo</span> "Mundo"
+                            </code></pre>
+                        </div>
+                        <hr>
+            
+                        <p class="texto margen-top"><span class="tecla">alias</span></p>
+                        <p class="texto">Crea comandos personalizados para ahorrar tiempo.</p>
+                        <div class="terminal">
+                            <div class="terminal__bar"><span>bash</span><button class="terminal__btn">Copiar Código</button></div>
+                            <pre class="terminal__contenido"><code>
+<span class="comando">alias</span> gs="git status"
+<span class="comando">alias</span> cls="clear"
+                            </code></pre>
+                        </div>
+                        <hr>
+            
+                        <p class="texto margen-top">Alias permanentes</p>
+                        <p class="texto">Agrega tus alias al final del archivo <span class="tecla">.bashrc</span> o <span class="tecla">.zshrc</span> para que se apliquen siempre al iniciar la terminal.</p>
+                        <div class="terminal">
+                            <div class="terminal__bar"><span>bash</span><button class="terminal__btn">Copiar Código</button></div>
+                            <pre class="terminal__contenido"><code>
+<span class="comando">nano</span> ~/.bashrc
+<span class="comando">source</span> ~/.bashrc
+                            </code></pre>
+                        </div>
+            
+                        <p class="texto">📘 Tip: Combina pipes con alias para crear herramientas a medida.</p>
+                    </div>
+            
+                    <div class="seccion__imagen">
+                        <div class="seccion_imagen--imagen">
+                            <img src="../imagenes2/c3 15.webp">
+                        </div>
+                    </div>
+                </div>
+                <button data-seccion="6" data-boton="anterior" class="btn btn-anterior"><img src="../imagenes2/icons8-go-back-50.webp" alt="Atras"></button>
+                <button data-seccion="6" data-boton="siguiente" class="btn btn-siguiente"><img src="../imagenes2/icons8-siguiente-100.webp" alt="Siguiente"></button>
+            </section> <!-- CURSO 3 SECCION 6 -->
+            
+            <section class="seccionCurso" data-seccion="7" data-idCurso="3">
+                <div class="seccion">
+                    <div class="seccion__textos">
+                        <h2 class="titulo titulo-principal">🧠 Recomendaciones Finales y Siguientes Pasos</h2>
+            
+                        <p class="intro texto">Dominar los comandos básicos de Linux es solo el inicio de tu camino. La práctica constante y la curiosidad por aprender más son claves para convertirte en alguien realmente competente en la terminal. En esta sección te comparto algunas recomendaciones que te servirán para mantenerte en forma y seguir avanzando.</p>
+            
+                        <p class="texto margen-top">💡 <strong>Practica todos los días</strong></p>
+                        <p class="texto">Dedica al menos unos minutos al día a usar la terminal. Con el tiempo, los comandos se volverán parte de tu memoria muscular.</p>
+            
+                        <p class="texto margen-top">🛠️ <strong>Utiliza recursos útiles</strong></p>
+                        <p class="texto">Herramientas como <a href="https://explainshell.com" target="_blank" class="enlace">explainshell.com</a>, <span class="tecla">tldr</span> y <a href="https://cheat.sh" target="_blank" class="enlace">cheat.sh</a> te ayudan a entender y recordar comandos.</p>
+                        <div class="terminal">
+                            <div class="terminal__bar"><span>bash</span><button class="terminal__btn">Copiar Código</button></div>
+                            <pre class="terminal__contenido"><code>
+<span class="comando">tldr</span> tar
+<span class="comando">curl</span> cheat.sh/rsync
+                            </code></pre>
+                        </div>
+            
+                        <p class="texto margen-top">📄 <strong>Aprende a crear scripts .sh</strong></p>
+                        <p class="texto">Automatizar tareas básicas con scripts te abrirá las puertas a Bash y más allá.</p>
+                        <div class="terminal">
+                            <div class="terminal__bar"><span>bash</span><button class="terminal__btn">Copiar Código</button></div>
+                            <pre class="terminal__contenido"><code>
+<span class="comentario"># hola.sh</span>
+<span class="comando">echo</span> "Hola, mundo"
+                            </code></pre>
+                        </div>
+            
+                        <p class="texto margen-top">🚀 <strong>Próximo paso sugerido</strong></p>
+                        <p class="texto">Aprender <strong>Bash Scripting</strong> o adentrarte en comandos más avanzados para administración del sistema es una gran manera de seguir creciendo en tu camino Linuxero.</p>
+                    </div>
+            
+                    
+                    
+                    <div class="seccion">
+                        <div class="seccion__textos">
+                            <h2 class="titulo titulo-principal">🎉 ¡Completaste el curso de Comandos Esenciales!</h2>
+                            <p class="texto intro">Has dominado lo más importante: controlar tu sistema desde la terminal.</p>
+                            <b>Ahora puedes:</b>
+                            <ul class="lista">
+                                <li class="lista__item">✅ Navegar por el sistema de archivos como un profesional.</li>
+                                <li class="lista__item">✅ Manipular archivos y carpetas de forma rápida y precisa.</li>
+                                <li class="lista__item">✅ Gestionar permisos, procesos y recursos del sistema.</li>
+                                <li class="lista__item">✅ Utilizar herramientas clave para diagnóstico y administración.</li>
+                            </ul>
+                            <p class="texto intro">
+                                👏 ¡Felicidades! Dominar la terminal es uno de los mayores logros en tu camino con Linux. Esto no termina aquí: sigue explorando, creando scripts y automatizando tareas. El poder ya está en tus manos.
+                            </p>
+                        </div>
+                    </div>
+                </div>                
+                <button data-seccion="7" data-boton="anterior" class="btn btn-anterior">
+                    <img src="../imagenes2/icons8-go-back-50.webp" alt="Atras">
+                </button>
+                <a href="../vistas/index.html" class="btn-final">Finalizar Curso</a>
+            </section> <!-- CURSO 3 SECCION 7 -->      
+        </div> <!-- Curso 3-->
+
+        <div data-idCurso="4" data-nombre="curso4" class="curso4 curso">
+            <section class="seccionCurso" data-seccion="1" data-idCurso="4">
+                <div class="seccion">
+                    <div class="seccion__textos">
+                        <h2 class="titulo titulo-principal">📦 Instalar y eliminar programas desde la terminal</h2>
+                        <p class="intro texto">Este módulo te enseña a añadir nuevas herramientas a tu sistema y eliminar lo que ya no usas, todo desde la línea de comandos. Entender cómo funcionan los paquetes y gestores es clave para mantener tu sistema limpio, ágil y funcional.</p>
+                        <p class="texto margen-top">⬇️ <strong>Instala nuevas aplicaciones fácilmente</strong></p>
+                        <p class="texto">Con comandos como <code>apt install</code>, <code>dnf install</code> o <code>pacman -S</code>, podrás añadir herramientas útiles como editores de texto, navegadores, utilidades de red y más.</p>
+                        <div class="terminal">
+                            <div class="terminal__bar"><span>bash</span><button class="terminal__btn">Copiar Código</button></div>
+                            <pre class="terminal__contenido"><code>
+<span class="comando">sudo apt install</span> neofetch
+<span class="comando">sudo dnf install</span> htop
+<span class="comando">sudo pacman -S</span> vim
+                            </code></pre>
+                        </div>
+                        <p class="texto margen-top">🗑️ <strong>Elimina lo que no necesitas</strong></p>
+                        <p class="texto">A veces es necesario desinstalar software. Aquí aprenderás la diferencia entre <code>remove</code> y <code>purge</code>, y cómo liberar espacio sin romper dependencias.</p>
+                        <div class="terminal">
+                            <div class="terminal__bar"><span>bash</span><button class="terminal__btn">Copiar Código</button></div>
+                            <pre class="terminal__contenido"><code>
+<span class="comando">sudo apt remove</span> package-name
+<span class="comando">sudo apt purge</span> package-name
+                            </code></pre>
+                        </div>
+                        <p class="texto margen-top">🔍 <strong>Busca e investiga antes de instalar</strong></p>
+                        <p class="texto">Antes de instalar, puedes buscar paquetes disponibles o verificar su información. Esto te ayuda a no instalar algo innecesario o inseguro.</p>
+                        <div class="terminal">
+                            <div class="terminal__bar"><span>bash</span><button class="terminal__btn">Copiar Código</button></div>
+                            <pre class="terminal__contenido"><code>
+<span class="comando">apt search</span> nombre
+<span class="comando">apt show</span> nombre
+                            </code></pre>
+                        </div>
+                        <p class="texto margen-top">🛡️ <strong>Usa <code>sudo</code> con responsabilidad</strong></p>
+                        <p class="texto">Instalar o eliminar programas requiere permisos de administrador. Siempre que veas <code>sudo</code>, entiende que estás haciendo cambios importantes en tu sistema.</p>
+                    </div>
+                </div>
+                <button data-seccion="1" data-boton="siguiente" class="btn btn-siguiente"><img src="../imagenes2/icons8-siguiente-100.webp" alt="Siguiente"></button>
+            </section>
+            <section class="seccionCurso" data-seccion="2" data-idCurso="4">
+                <div class="seccion">
+                    <div class="seccion__textos">
+                        <h2 class="titulo titulo-principal">🔧 Instalar y gestionar paquetes con APT (Ubuntu / Debian)</h2>
+                
+                        <p class="intro texto">APT es el gestor de paquetes por excelencia en distribuciones basadas en Debian como Ubuntu. Con él puedes instalar, eliminar, buscar y actualizar paquetes de forma rápida y segura.</p>
+                
+                        <p class="texto margen-top">📥 <strong>Instalar paquetes con <code>apt</code></strong></p>
+                        <p class="texto">La forma más directa de añadir software. Solo necesitas el nombre del paquete y permisos de administrador.</p>
+                
+                        <div class="terminal">
+                            <div class="terminal__bar"><span>bash</span><button class="terminal__btn">Copiar Código</button></div>
+                            <pre class="terminal__contenido"><code>
+<span class="comando">sudo apt update</span>           <span class="comentario"># Actualiza la lista de paquetes</span>
+<span class="comando">sudo apt install</span> htop     <span class="comentario"># Instala el programa "htop"</span>
+                            </code></pre>
+                        </div>
+                
+                        <p class="texto margen-top">🗑️ <strong>Eliminar paquetes con <code>apt</code></strong></p>
+                        <p class="texto">Puedes quitar un programa con <code>remove</code> o borrarlo completamente con <code>purge</code>, que también elimina configuraciones.</p>
+                
+                        <div class="terminal">
+                            <div class="terminal__bar"><span>bash</span><button class="terminal__btn">Copiar Código</button></div>
+                            <pre class="terminal__contenido"><code>
+<span class="comando">sudo apt remove</span> htop
+<span class="comando">sudo apt purge</span> htop
+                            </code></pre>
+                        </div>
+                
+                        <p class="texto margen-top">🔍 <strong>Buscar paquetes con <code>apt</code></strong></p>
+                        <p class="texto">No siempre conoces el nombre exacto de un programa. Usa <code>search</code> para encontrarlo o <code>show</code> para ver detalles antes de instalar.</p>
+                
+                        <div class="terminal">
+                            <div class="terminal__bar"><span>bash</span><button class="terminal__btn">Copiar Código</button></div>
+                            <pre class="terminal__contenido"><code>
+<span class="comando">apt search</span> htop
+<span class="comando">apt show</span> htop
+                            </code></pre>
+                        </div>
+                
+                        <p class="texto margen-top">🔁 <strong>Actualizar el sistema</strong></p>
+                        <p class="texto">Mantener tu sistema actualizado es vital. Estos comandos te permiten actualizar la base de datos y los paquetes instalados.</p>
+                
+                        <div class="terminal">
+                            <div class="terminal__bar"><span>bash</span><button class="terminal__btn">Copiar Código</button></div>
+                            <pre class="terminal__contenido"><code>
+<span class="comando">sudo apt update</span>   <span class="comentario"># Refresca la lista de paquetes</span>
+<span class="comando">sudo apt upgrade</span>   <span class="comentario"># Actualiza todos los paquetes</span>
+                            </code></pre>
+                        </div>
+                
+                        <p class="texto margen-top">📌 <strong>Tips rápidos:</strong></p>
+                        <ul class="lista">
+                            <li class="lista__item">✅ Usa <code>apt list --installed</code> para ver todo lo que tienes instalado.</li>
+                            <li class="lista__item">✅ Usa <code>apt autoremove</code> para limpiar paquetes que ya no se usan.</li>
+                            <li class="lista__item">✅ Puedes combinar comandos como <code>update && upgrade</code> para ahorrar tiempo.</li>
+                        </ul>
+                    </div>
+                </div>
+                <button data-seccion="2" data-boton="anterior" class="btn btn-anterior"><img src="../imagenes2/icons8-go-back-50.webp" alt="Atras"></button>
+                <button data-seccion="2" data-boton="siguiente" class="btn btn-siguiente"><img src="../imagenes2/icons8-siguiente-100.webp" alt="Siguiente"></button>
+            </section>
+            <section class="seccionCurso" data-seccion="3" data-idCurso="4">
+                <div class="seccion">
+                    <div class="seccion__textos">
+                        <h2 class="titulo titulo-principal">🔧 Gestión avanzada de paquetes con APT</h2>
+                        <p class="texto"><i>🛠️ Actualiza, limpia y gestiona tus paquetes de manera eficiente.</i></p>
+                        <p class="texto">El gestor de paquetes APT no solo te ayuda a instalar y eliminar programas, sino que también te permite mantener tu sistema limpio, actualizado y funcionando sin problemas. En este módulo aprenderás a realizar actualizaciones, manejar dependencias, y limpiar archivos residuales para optimizar tu sistema.</p>
+                
+                        <h3 class="subtitulo">💡 <strong>Actualizar paquetes y el sistema</strong></h3>
+                        <p class="texto">Mantener tu sistema actualizado es clave para asegurar su estabilidad y seguridad. Aquí aprenderás a actualizar los paquetes instalados y el propio sistema operativo con APT.</p>
+                        <ul class="lista">
+                            <li class="lista__item"><span class="comando">sudo apt update</span>: Actualiza la lista de paquetes disponibles.</li>
+                            <li class="lista__item"><span class="comando">sudo apt upgrade</span>: Actualiza todos los paquetes instalados a sus últimas versiones.</li>
+                            <li class="lista__item"><span class="comando">sudo apt full-upgrade</span>: Realiza una actualización completa, incluyendo la eliminación de paquetes obsoletos.</li>
+                        </ul>
+                
+                        <h3 class="subtitulo">🧹 <strong>Limpieza de paquetes y dependencias no utilizadas</strong></h3>
+                        <p class="texto">Cuando eliminas programas, algunas dependencias y archivos quedan sin usar. Mantén tu sistema limpio utilizando herramientas que gestionan esas dependencias no necesarias.</p>
+                        <ul class="lista">
+                            <li class="lista__item"><span class="comando">sudo apt autoremove</span>: Elimina dependencias que ya no son necesarias.</li>
+                            <li class="lista__item"><span class="comando">sudo apt clean</span>: Limpia el caché de paquetes descargados, liberando espacio en disco.</li>
+                            <li class="lista__item"><span class="comando">sudo apt autoclean</span>: Elimina solo los archivos de paquetes que ya no se pueden descargar.</li>
+                        </ul>
+                
+                        <h3 class="subtitulo">🔍 <strong>Listar paquetes instalados y obtener información sobre ellos</strong></h3>
+                        <p class="texto">APT también te permite obtener información detallada sobre los paquetes instalados en tu sistema y ver qué programas están actualmente en uso.</p>
+                        <ul class="lista">
+                            <li class="lista__item"><span class="comando">apt list --installed</span>: Muestra una lista de todos los paquetes instalados en el sistema.</li>
+                            <li class="lista__item"><span class="comando">apt show <paquete></span>: Muestra detalles de un paquete específico.</li>
+                        </ul>
+                
+                        <h3 class="subtitulo">🔒 <strong>Verificación y resolución de dependencias</strong></h3>
+                        <p class="texto">A veces, los paquetes pueden no instalarse correctamente por problemas de dependencias. Con APT, puedes resolver y verificar estos problemas rápidamente.</p>
+                        <ul class="lista">
+                            <li class="lista__item"><span class="comando">sudo apt install -f</span>: Intenta corregir dependencias rotas.</li>
+                            <li class="lista__item"><span class="comando">sudo apt check</span>: Verifica que no haya dependencias rotas en tu sistema.</li>
+                        </ul>
+                
+                        <h3 class="subtitulo">⚡ <strong>Actualizar solo los paquetes específicos</strong></h3>
+                        <p class="texto">Si no deseas actualizar todos los paquetes del sistema, puedes actualizar solo paquetes específicos.</p>
+                        <ul class="lista">
+                            <li class="lista__item"><span class="comando">sudo apt install --only-upgrade <paquete></span>: Actualiza un solo paquete sin afectar al resto del sistema.</li>
+                        </ul>
+                    </div>
+                
+                    <div class="seccion__imagen">
+                        <div class="seccion_imagen--imagen">
+                            <img src="../imagenes2/c4 1.png" alt="Gestión avanzada con APT">
+                        </div>
+                    </div>
+                </div>
+                
+                <button data-seccion="3" data-boton="anterior" class="btn btn-anterior"><img src="../imagenes2/icons8-go-back-50.webp" alt="Atras"></button>
+                <button data-seccion="3" data-boton="siguiente" class="btn btn-siguiente"><img src="../imagenes2/icons8-siguiente-100.webp" alt="Siguiente"></button>
+            </section>
+            <section class="seccionCurso" data-seccion="4" data-idCurso="4">
+                <div class="seccion">
+                    <div class="seccion__textos">
+                        <h2 class="titulo titulo-principal">🔧 Gestión de Repositorios</h2>
+                        
+                        <p class="texto">En este módulo, aprenderás a gestionar los repositorios en tu sistema, lo cual es clave para acceder a más paquetes y mantener tus fuentes de software actualizadas. Los repositorios son servidores que contienen paquetes de software listos para ser instalados en tu sistema, y aprenderás a manejar estos recursos con eficiencia.</p>
+                
+                        <h3 class="subtitulo">Añadir y Eliminar Repositorios</h3>
+                        <p class="texto">Puedes añadir nuevos repositorios para acceder a más programas o eliminar los que ya no son necesarios. Usar repositorios adicionales, como PPA (Personal Package Archive), te da acceso a versiones más recientes de los programas.</p>
+                        <p class="texto">Ejemplo para añadir un repositorio:</p>
+                        <div class="terminal">
+                            <div class="terminal__bar"><span>bash</span><button class="terminal__btn">Copiar Código</button></div>
+                            <pre class="terminal__contenido"><code>
+<span class="comando">sudo add-apt-repository</span> ppa:repo/nombre
+                            </code></pre>
+                        </div>
+                
+                        <h3 class="subtitulo">Actualizar la Lista de Paquetes</h3>
+                        <p class="texto">Una vez que se hayan añadido o eliminado repositorios, es importante actualizar la lista de paquetes para que APT pueda reconocer los cambios y descargar los paquetes más recientes.</p>
+                        <p class="texto">Ejemplo para actualizar la lista de paquetes:</p>
+                        <div class="terminal">
+                            <div class="terminal__bar"><span>bash</span><button class="terminal__btn">Copiar Código</button></div>
+                            <pre class="terminal__contenido"><code>
+<span class="comando">sudo apt update</span>
+                            </code></pre>
+                        </div>
+                
+                        <h3 class="subtitulo">Gestionar Fuentes de Software</h3>
+                        <p class="texto">Puedes gestionar las fuentes de software manualmente editando el archivo <code>/etc/apt/sources.list</code>, donde se encuentran las URLs de los repositorios. Ten cuidado al hacerlo, ya que agregar repositorios mal configurados puede causar problemas.</p>
+                        
+                        <p class="texto">Ejemplo de cómo abrir el archivo para editarlo:</p>
+                        <div class="terminal">
+                            <div class="terminal__bar"><span>bash</span><button class="terminal__btn">Copiar Código</button></div>
+                            <pre class="terminal__contenido"><code>
+<span class="comando">sudo nano /etc/apt/sources.list</span>
+                            </code></pre>
+                        </div>
+                
+                        <h3 class="subtitulo">Verificar la Integridad de los Repositorios</h3>
+                        <p class="texto">Es importante asegurarte de que los repositorios que estás utilizando son confiables. Puedes verificar las claves de los repositorios con el comando <code>apt-key</code> para garantizar que no estás añadiendo repositorios no seguros.</p>
+                        
+                        <p class="texto">Ejemplo para verificar las claves de los repositorios:</p>
+                        <div class="terminal">
+                            <div class="terminal__bar"><span>bash</span><button class="terminal__btn">Copiar Código</button></div>
+                            <pre class="terminal__contenido"><code>
+<span class="comando">sudo apt-key list</span>
+                            </code></pre>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="seccion">
+                    <div class="seccion__textos">
+                        <h2 class="titulo titulo-principal">🎉 ¡Completaste el curso de Gestión de Paquetes!</h2>
+                        <p class="texto intro">¡Felicidades! Has aprendido a instalar, eliminar, actualizar y gestionar programas en tu sistema Linux utilizando APT.</p>
+                        <b>Ahora puedes:</b>
+                        <ul class="lista">
+                            <li class="lista__item">✅ Instalar software de manera eficiente desde la terminal.</li>
+                            <li class="lista__item">✅ Actualizar y mantener tus programas al día con facilidad.</li>
+                            <li class="lista__item">✅ Eliminar programas correctamente y liberar espacio en tu sistema.</li>
+                            <li class="lista__item">✅ Gestionar repositorios y asegurarte de que siempre tienes acceso a las últimas versiones de software.</li>
+                        </ul>
+                        <p class="texto intro">
+                            👏 ¡Lo has logrado! A partir de ahora, la gestión de software en tu sistema Linux será rápida, eficiente y libre de complicaciones. Sigue practicando y avanzando, y te convertirás en un experto en la administración de tu entorno Linux.
+                        </p>
+                    </div>
+                </div>
+                
+                <button data-seccion="4" data-boton="anterior" class="btn btn-anterior"><img src="../imagenes2/icons8-go-back-50.webp" alt="Atras"></button>
+                <a href="../vistas/index.html" class="btn-final">Finalizar Curso</a>
+            </section>
+        </div>  <!-- Curso 4-->
+    </div>
+
+    <script src="../js/menu.js"></script>
+    <script src="../js/cursos.js"></script>
+</script>
+</body>
+</html>
+

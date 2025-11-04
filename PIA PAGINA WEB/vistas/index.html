@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnLinux</title>
+    <link rel="stylesheet" href="../estilos/index.css">
+    <link rel="stylesheet" href="../estilos/cursos.css">
+</head>
+<body>
+    
+    <nav class="nav">
+        <div class="nav__container">
+            <div class="nav__logo">
+                <img src="../imagenes2/logo.webp" alt="LearnLinux Logo">
+            </div>
+
+            <div class="nav__links">
+                <ul class="links">
+                    <li class="links__link"><a href="./index.html">Inicio</a></li>
+                    <li class="links__link"><a href="./examenes.html">Exámenes</a></li>
+                    <li class="links__link"><a href="./resultados.html">Resultados</a></li>
+                </ul>
+
+                <button class="btn-popup">
+                    <img src="../imagenes2/icons8-menú.svg" alt="Menu">
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="popup active">
+        <ul class="links">
+            <li class="links__link"><a class="a-link" href="./index.html">Inicio</a></li>
+            <li class="links__link"><a class="a-link" href="./examenes.html">Exámenes</a></li>
+            <li class="links__link"><a class="a-link" href="./resultados.html">Resultados</a></li>
+            <button class="btn-close btn-hamburguer">
+                <img src="../imagenes2/icons8-eliminar.svg">
+            </button>
+        </ul>
+    </nav>
+    
+    <section class="hero">
+        <div class="hero__text">
+            <h1 class="texto-animado"></h1>
+        </div>
+        <div class="hero__img">
+            <img class="hero__img--img" src="../imagenes2/hero.svg" alt="">
+        </div>
+    </section>
+
+    <div class="clase">
+        <section class="cursos outer">
+                <div class="slider">
+                    <section class="section section-curso section-curso1">
+                        <img src="../imagenes2/linux.webp" class="icon icon1" data-distancia="100"/>
+                        <img src="../imagenes2/ajustes.webp" class="icon icon2" data-distancia="200"/>
+                        <img src="../imagenes2/fedora.webp" class="icon icon3" data-distancia="150"/>
+                        <img src="../imagenes2/ubuntu.webp" class="icon icon4" data-distancia="215"/>
+                        <img src="../imagenes2/arch-linux.webp" class="icon icon5" data-distancia="100"/>
+                        <img src="../imagenes2/keys.webp" class="icon icon6" data-distancia="105"/>
+                        <img src="../imagenes2/terminal.webp" class="icon icon7" data-distancia="100"/>
+                        <img src="../imagenes2/red-hat.webp" class="icon icon8" data-distancia="150"/>
+                        <img src="../imagenes2/mint.webp" class="icon icon9" data-distancia="100"/>
+                        <img src="../imagenes2/bash.webp" class="icon icon10" data-distancia="120"/>
+                        <img src="../imagenes2/u.webp" class="icon icon12" data-distancia="100"/>
+                <div class="card block blue inner" data-curso="curso1" data-idCurso="1">
+                  <div class="card-header">
+                    <div class="date">
+                    08 Marzo, 2025
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                      <path fill-rule="evenodd" d="M10.5 6a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm0 6a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm0 6a1.5 1.5 0" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                  <div class="card-body">
+                    <h3>Instalación de Linux</h3>
+                    <p>Aprende a instalar Distribuciones como Ubuntu o Debian desde 0.</p>
+                    <div class="progress">
+                      <span>Progreso</span>
+                      <div class="progress-bar" data-curso="1"></div>
+                      <span class="porcetaje" data-curso="1">0%</span>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <a href="./cursos.html?idCurso=1" data-curso="curso1" class="btn-countdown">Iniciar</a>
+                  </div>
+                </div>
+                    </section>
+                    <section class="section section-curso section-curso2">
+                        <img src="../imagenes2/linux.webp" class="icon icon12" data-distancia="100"/>
+                        <img src="../imagenes2/ajustes.webp" class="icon icon10" data-distancia="200"/>
+                        <img src="../imagenes2/fedora.webp" class="icon icon9" data-distancia="150"/>
+                        <img src="../imagenes2/ubuntu.webp" class="icon icon8" data-distancia="215"/>
+                        <img src="../imagenes2/arch-linux.webp" class="icon icon7" data-distancia="100"/>
+                        <img src="../imagenes2/keys.webp" class="icon icon6" data-distancia="105"/>
+                        <img src="../imagenes2/terminal.webp" class="icon icon5" data-distancia="100"/>
+                        <img src="../imagenes2/red-hat.webp" class="icon icon4" data-distancia="150"/>
+                        <img src="../imagenes2/mint.webp" class="icon icon3" data-distancia="100"/>
+                        <img src="../imagenes2/bash.webp" class="icon icon2" data-distancia="120"/>
+                        <img src="../imagenes2/u.webp" class="icon icon1" data-distancia="100"/>
+                <div class="card block green inner" data-curso="curso2" data-idCurso="2">
+                  <div class="card-header">
+                    <div class="date">
+                    08 Marzo, 2025
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                      <path fill-rule="evenodd" d="M10.5 6a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm0 6a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm0 6a1.5 1.5 0" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                  <div class="card-body">
+                    <h3>Primeros pasos en linux</h3>
+                    <p>Descubre qué es, como funciona y porqué deberías usarlo.</p>
+                    <div class="progress">
+                      <span>Progreso</span>
+                      <div class="progress-bar" data-curso="2"></div>
+                      <span class="porcetaje" data-curso="2">0%</span>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <a href="./cursos.html?idCurso=2" data-curso="curso2" class="btn-countdown">Iniciar</a>
+                  </div>
+                </div>
+                    </section>
+                    <section class="section section-curso section-curso3">
+                        <img src="../imagenes2/linux.webp" class="icon icon5" data-distancia="100"/>
+                        <img src="../imagenes2/ajustes.webp" class="icon icon4" data-distancia="200"/>
+                        <img src="../imagenes2/fedora.webp" class="icon icon3" data-distancia="150"/>
+                        <img src="../imagenes2/ubuntu.webp" class="icon icon2" data-distancia="215"/>
+                        <img src="../imagenes2/arch-linux.webp" class="icon icon1" data-distancia="100"/>
+                        <img src="../imagenes2/keys.webp" class="icon icon12" data-distancia="105"/>
+                        <img src="../imagenes2/terminal.webp" class="icon icon10" data-distancia="100"/>
+                        <img src="../imagenes2/red-hat.webp" class="icon icon9" data-distancia="150"/>
+                        <img src="../imagenes2/mint.webp" class="icon icon8" data-distancia="100"/>
+                        <img src="../imagenes2/bash.webp" class="icon icon7" data-distancia="120"/>
+                        <img src="../imagenes2/u.webp" class="icon icon6" data-distancia="100"/>
+                <div class="card block red inner" data-curso="curso3" data-idCurso="3">
+                  <div class="card-header">
+                    <div class="date">
+                    08 Marzo, 2025
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                      <path fill-rule="evenodd" d="M10.5 6a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm0 6a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm0 6a1.5 1.5 0" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                  <div class="card-body">
+                    <h3>Comandos esenciales</h3>
+                    <p>Domina los comandos básicos para navegar y trabajar con la terminal.</p>
+                    <div class="progress">
+                      <span>Progreso</span>
+                      <div class="progress-bar" data-curso="3"></div>
+                      <span class="porcetaje" data-curso="3">0%</span>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <a href="./cursos.html?idCurso=3" data-curso="curso3" class="btn-countdown">Iniciar</a>
+                  </div>
+                </div>
+                    </section>
+                    <section class="section section-curso section-curso4">
+                        <img src="../imagenes2/linux.webp" class="icon icon5" data-distancia="100"/>
+                        <img src="../imagenes2/ajustes.webp" class="icon icon4" data-distancia="200"/>
+                        <img src="../imagenes2/fedora.webp" class="icon icon1" data-distancia="150"/>
+                        <img src="../imagenes2/ubuntu.webp" class="icon icon2" data-distancia="215"/>
+                        <img src="../imagenes2/arch-linux.webp" class="icon icon9" data-distancia="100"/>
+                        <img src="../imagenes2/keys.webp" class="icon icon12" data-distancia="105"/>
+                        <img src="../imagenes2/terminal.webp" class="icon icon3" data-distancia="100"/>
+                        <img src="../imagenes2/red-hat.webp" class="icon icon10" data-distancia="150"/>
+                        <img src="../imagenes2/mint.webp" class="icon icon8" data-distancia="100"/>
+                        <img src="../imagenes2/bash.webp" class="icon icon7" data-distancia="120"/>
+                        <img src="../imagenes2/u.webp" class="icon icon6" data-distancia="100"/>
+                <div class="card block orange inner" data-curso="curso4" data-idCurso="4">
+                  <div class="card-header">
+                    <div class="date">
+                    08 Marzo, 2025
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                      <path fill-rule="evenodd" d="M10.5 6a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm0 6a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm0 6a1.5 1.5 0" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                  <div class="card-body">
+                    <h3>Gestión de Paquetes</h3>
+                    <p>Instala, actualiza y elimina programas desde la línea de comandos.</p>
+                    <div class="progress">
+                      <span>Progreso</span>
+                      <div class="progress-bar" data-curso="4"></div>
+                      <span class="porcetaje" data-curso="4">0%</span>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <a href="./cursos.html?idCurso=4" data-curso="curso4" class="btn-countdown">Iniciar</a>
+                  </div>
+                </div>
+                    </section>
+                </div>
+        
+        </section>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/TextPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+
+
+    <script src="../js/efectos.js"></script>
+    <script src="../js/menu.js" defer></script>
+</body>
+</html>

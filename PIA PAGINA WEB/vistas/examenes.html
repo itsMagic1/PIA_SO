@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exámenes - LearnLinux</title>
+    <link rel="stylesheet" href="../estilos/index.css">
+    <link rel="stylesheet" href="../estilos/examenes.css">
+</head>
+<body>
+
+    <nav class="nav">
+        <div class="nav__container">
+            <div class="nav__logo">
+                <img src="../imagenes2/logo.webp" alt="LearnLinux Logo">
+            </div>
+
+            <div class="nav__links">
+                <ul class="links">
+                    <li class="links__link"><a href="./index.html">Inicio</a></li>
+                    <li class="links__link"><a href="./examenes.html">Exámenes</a></li>
+                    <li class="links__link"><a href="./resultados.html">Resultados</a></li>
+                </ul>
+
+                <button class="btn-popup">
+                    <img src="../imagenes2/icons8-menú.svg" alt="Menu">
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="popup active">
+        <ul class="links">
+            <li class="links__link"><a class="a-link" href="./index.html">Inicio</a></li>
+            <li class="links__link"><a class="a-link" href="./examenes.html">Exámenes</a></li>
+            <li class="links__link"><a class="a-link" href="./resultados.html">Resultados</a></li>
+            <button class="btn-close btn-hamburguer">
+                <img src="../imagenes2/icons8-eliminar.svg">
+            </button>
+        </ul>
+    </nav>
+
+    <!-- Menú desplegable de Exámenes -->
+    <div class="menu-examenes">
+        <!-- Curso 1: Curso Instalación de Linux -->
+        <div class="curso texto" onclick="toggleModulo('modulo-curso-1')">🖥️ Instalación De Linux</div>
+        <div id="modulo-curso-1" class="modulo">
+            <a href="./examen.html?curso=1&examen=1">Examen 1</a>
+            <a href="./examen.html?curso=1&examen=2">Examen 2</a>
+            <a href="./examen.html?curso=1&examen=3">Examen 3</a>
+        </div>
+
+        <!-- Curso 2: Primeros Pasos en Linux -->
+        <div class="curso texto" onclick="toggleModulo('modulo-curso-2')">🚀 Primeros Pasos en Linux</div>
+        <div id="modulo-curso-2" class="modulo">
+            <a href="./examen.html?curso=2&examen=1">Examen 1</a>
+            <a href="./examen.html?curso=2&examen=2">Examen 2</a>
+            <a href="./examen.html?curso=2&examen=3">Examen 3</a>
+        </div>
+
+        <!-- Curso 3: Comandos Esenciales -->
+        <div class="curso texto" onclick="toggleModulo('modulo-curso-3')">🔒 Comandos Esenciales</div>
+        <div id="modulo-curso-3" class="modulo">
+            <a href="./examen.html?curso=3&examen=1">Examen 1</a>
+            <a href="./examen.html?curso=3&examen=2">Examen 2</a>
+            <a href="./examen.html?curso=3&examen=3">Examen 3</a>
+        </div>
+
+        <!-- Curso 4: Gestión de Paquetes -->
+        <div class="curso texto" onclick="toggleModulo('modulo-curso-4')">📦 Gestión de Paquetes</div>
+        <div id="modulo-curso-4" class="modulo">
+            <a href="./examen.html?curso=4&examen=1">Examen 1</a>
+            <a href="./examen.html?curso=4&examen=2">Examen 2</a>
+        </div>
+    </div>
+
+    <script>
+        function toggleModulo(moduloId) {
+            var modulo = document.getElementById(moduloId);
+            modulo.classList.toggle('show');
+        }
+    </script>
+    <script src="../js/menu.js"></script>
+</body>
+</html>

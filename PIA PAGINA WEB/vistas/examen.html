@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exámenes - LearnLinux</title>
+    <link rel="stylesheet" href="../estilos/index.css">
+    <link rel="stylesheet" href="../estilos/examenes.css">
+</head>
+<body>
+
+    <nav class="nav">
+        <div class="nav__container">
+            <div class="nav__logo">
+                <img src="../imagenes2/logo.webp" alt="LearnLinux Logo">
+            </div>
+
+            <div class="nav__links">
+                <ul class="links">
+                    <li class="links__link"><a href="./index.html">Inicio</a></li>
+                    <li class="links__link"><a href="./examenes.html">Exámenes</a></li>
+                    <li class="links__link"><a href="./resultados.html">Resultados</a></li>
+                </ul>
+
+                <button class="btn-popup">
+                    <img src="../imagenes2/icons8-menú.svg" alt="Menu">
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="popup active">
+        <ul class="links">
+            <li class="links__link"><a class="a-link" href="./index.html">Inicio</a></li>
+            <li class="links__link"><a class="a-link" href="./examenes.html">Exámenes</a></li>
+            <li class="links__link"><a class="a-link" href="./resultados.html">Resultados</a></li>
+            <button class="btn-close btn-hamburguer">
+                <img src="../imagenes2/icons8-eliminar.svg">
+            </button>
+        </ul>
+    </nav>
+
+    <form id="form-examen" class="form-examen">
+        <!-- Aquí se generarán las preguntas dinámicamente -->
+        <button type="submit" class="btn-enviar">Enviar Examen</button>
+    </form>      
+    
+    <script>
+        function toggleModulo(moduloId) {
+            var modulo = document.getElementById(moduloId);
+            modulo.classList.toggle('show');
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/menu.js"></script>
+    <script src="../js/examen.js"></script>
+</body>
+</html>

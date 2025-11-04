@@ -1,0 +1,212 @@
+.menu-examenes {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 20px;
+}
+.curso {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    margin: 3rem 0 2.5px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    text-align: left;
+}
+.modulo {
+    background-color: #f1f1f1;
+    padding: 10px;
+    margin: 5px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    display: none;
+    width: 100%;
+}
+.modulo a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.75rem;
+  display: block;
+  margin-bottom: 1.5rem;
+}
+.modulo a:hover {
+  color: #007bff;
+}
+/* Agregar animación suave */
+.modulo.show {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+.curso.texto {
+  font-size: 2rem;
+}
+
+/* Examenes */
+.form-examen {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+fieldset.pregunta {
+  border: none;
+  margin-bottom: 30px;
+  padding: 0;
+}
+
+legend {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #00bcd4;
+}
+
+label.respuesta {
+  display: block;
+  margin: 8px 0;
+  padding: 10px 14px;
+  background-color: #3a3a3a;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  font-size: 1.4rem;
+}
+
+label.respuesta:hover {
+  background-color: #505050;
+}
+
+input[type="radio"] {
+  margin-right: 10px;
+  transform: scale(1.1);
+  accent-color: #00bcd4;
+}
+
+.btn-enviar {
+  display: block;
+  margin: 30px auto 0;
+  padding: 12px 24px;
+  font-size: 1.5rem;
+  font-weight: 800;
+  background-color: #00bcd4;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-enviar:hover {
+  background-color: #0097a7;
+}
+
+.btn-reiniciar {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-reiniciar:hover {
+  background-color: #d32f2f;
+}
+
+.menu-examenes {
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.curso.texto {
+  font-size: 1.6em;
+  font-weight: bold;
+  color: #333;
+  margin: 20px 0 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.curso.texto img {
+  width: 30px;
+  height: 30px;
+}
+
+.examenes {
+  margin-bottom: 30px;
+  margin: 1rem auto 4rem;
+  width: 40%;
+}
+
+.examenes p {
+  font-size: 1.1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+}
+
+.examenes a {
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.examenes a:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+.examenes span {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+  background-color: #f0f0f0;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.examenes p:hover {
+  background-color: #e0e0e0;
+  cursor: pointer;
+}
+
+.curso.texto:hover {
+  color: #003366;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 800px) {
+  .curso {
+    max-width: 90rem;
+  }
+
+  .menu-examenes {
+    align-items: center;
+  }
+
+  .modulo {
+    width: 40%;
+  }
+}
